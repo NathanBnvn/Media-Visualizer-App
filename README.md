@@ -7,3 +7,5 @@
 ## Description
 
 Have you ever ask yourself how to deal with all the digital media (pictures and videos mostly) that you have ? Not just about the ones on your computer but also those on the internet. This project will help you visualize and manage all your media.
+
+More info to be written 
