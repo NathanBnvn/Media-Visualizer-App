@@ -1,0 +1,1 @@
+"use strict";const e=require("electron"),r=require("node:path");e.app.whenReady().then(()=>{new e.BrowserWindow({titleBarStyle:"hiddenInset",trafficLightPosition:{x:10,y:10},titleBarOverlay:!0,webPreferences:{preload:r.join(__dirname,"preload.ts")}}).loadURL(process.env.VITE_DEV_SERVER_URL)});

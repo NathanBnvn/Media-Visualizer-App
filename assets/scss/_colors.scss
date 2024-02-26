@@ -1,0 +1,68 @@
+@use 'sass:map';
+
+/**
+ * Helper
+ */
+
+@function map-collect($maps...) {
+  $collection: ();
+
+  @each $map in $maps {
+    $collection: map.merge($collection, $map);
+  }
+
+  @return $collection;
+}
+
+$brandColors: (
+
+);
+
+$themeColors: (
+
+);
+
+$lightThemeColors: (
+  primary: #ffffff,
+  secondary: #fbfbfa,
+  tertiary: rgba(55, 53, 47, 0.08),
+  selected: rgb(55, 53, 47),
+  unselectedTypography: rgba(25, 23, 17, 0.6),
+);
+
+$darkThemeColors: (
+  primary: #191919,
+  secondary: #202020,
+  tertiary: rgb(155, 155, 155),
+  selected: rgba(255, 255, 255, 0.80),
+  unselectedTypography: rgb(155, 155, 155),
+);
+
+$systemColors: (
+  lightDanger: #FFD4D4,
+  danger: #D7302E,
+  lightSuccess: #D8F4D7,
+  success: #189A92,
+  warning: #d47f15
+);
+
+$colors: map-collect(
+  $brandColors,
+  $themeColors,
+  $darkThemeColors,
+  $lightThemeColors,
+  $systemColors
+);
+
+@function color($name, $opacity: 1) {
+  @return rgba(color-impl($name), $opacity);
+}
+
+@function color-impl($name) {
+  @if map-has-key($colors, $name) {
+    @return map-get($colors, $name);
+  }
+  @else {
+    @return $name;
+  }
+}

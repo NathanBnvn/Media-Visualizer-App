@@ -1,0 +1,7 @@
+
+@mixin square($size: 20px) {
+    width: $size;
+    height: $size;
+  }
+
+
