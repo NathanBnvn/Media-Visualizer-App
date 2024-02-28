@@ -3,8 +3,7 @@
     <NavigationBar/>
     <div class="main-content">
       <Header/>
-      <NuxtLink to="/home">XO</NuxtLink>
-      <NuxtChild></NuxtChild>
+      <NuxtPage/>
     </div>
     <TagBar/>
   </div>

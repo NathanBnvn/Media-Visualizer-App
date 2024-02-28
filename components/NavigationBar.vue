@@ -3,10 +3,17 @@
         <div class="navigation-bar-top"/>
         <div class="navigation-bar-container">
             <UIButton class="navigation-bar-button" 
-            buttonName="Profil" iconName="healthicons:ui-user-profile-outline"/>
+            buttonType="navigation" buttonName="Profil" 
+            path="/profil" iconName="healthicons:ui-user-profile-outline"/>
 
             <UIButton class="navigation-bar-button"
-            buttonName="Tag Manager" iconName="solar:hashtag-circle-outline"/>
+            buttonType="navigation" buttonName="Home" 
+            path="/" iconName="mdi:home-circle-outline"/>
+
+            <UIButton class="navigation-bar-button"
+            buttonType="navigation" buttonName="Tag Manager" 
+            path="/tag-manager" iconName="solar:hashtag-circle-outline"/>
+
         </div>
     </nav>
 </template>
@@ -37,7 +44,7 @@
     }
 
     &-button {
-        padding: 5px 10px;
+        padding: 5px 0px;
         width: 100%;
     }
 }

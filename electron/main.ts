@@ -9,7 +9,7 @@ app.whenReady().then(() => {
     titleBarStyle: 'hidden',
     trafficLightPosition: {x: 10, y: 10},
     titleBarOverlay: true,
-        
+    
     webPreferences: {
       preload: path.join(__dirname, 'preload.ts')
     }

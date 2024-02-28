@@ -1,6 +1,6 @@
 <template>
-    <div style="background-color: red; height: 100%; width: 100%;">
-    Tag Manager
+    <div style="background-color: yellow; height: 100%; width: 100%;">
+        Profil
     </div>
 </template>
 
