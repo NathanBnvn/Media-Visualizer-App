@@ -26,8 +26,6 @@
 </template>
 
 <script lang="ts" setup>
-    import { BrowserWindow } from 'electron';
-
     var isActive:boolean = false
 
     function activateNavigationBar(isActive: boolean): void {
