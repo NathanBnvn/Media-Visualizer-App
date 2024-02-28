@@ -1,7 +1,7 @@
 <template>
     <div class="input">
         <label class="input-label" :for="id">{{ id }}</label>
-        <textarea v-if="isComment" class="input-input input-textarea">
+        <textarea v-if="isComment" :id="id" class="input-input input-textarea">
         </textarea>
         <input v-else class="input-input input-input-field" 
         :type="type" :id="id" :name="id" :placeholder="placeholder">
