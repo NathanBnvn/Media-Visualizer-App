@@ -1,7 +1,7 @@
 <template>
-    <div class="tag-bar">
+    <nav class="tag-bar">
         <UIButton class="tag-bar-close-button" buttonType="button" iconName="mi:close" @is-clicked="closeTagBar"/>
-        <form>
+        <form class="tag-bar-form">
         <div class="tag-bar-content">
             <div> 
                 <UIInput id="name" type="text"/>
@@ -30,19 +30,28 @@
             <input class="tag-button-submit" type="submit" value="Submit">
         </div>
         </form>
-    </div>
+    </nav>
 </template>
 
 <script lang="ts" setup>
 
     function closeTagBar(): void {
         const tagBar = document.getElementsByClassName('tag-bar')[0] as HTMLInputElement | null
+        const tagForm = document.getElementsByClassName('tag-bar-form')[0] as HTMLInputElement | null
+        const tagBarCloseButton = document.getElementsByClassName('tag-bar-close-button')[0] as HTMLElement | null
+        let tagBarIsClosed: boolean = false
         
-        if (tagBar != null) {
-            if (tagBar.style.width == "250px") {
-                tagBar.style.width = "0px"
-            } else {
+        if (tagBar != null && tagForm != null && tagBarCloseButton != null) {
+            if (tagBarIsClosed) {
                 tagBar.style.width = "250px"
+                tagForm.style.display = "flex"
+                tagBarCloseButton.style.display = "flex"
+                tagBarIsClosed = false
+            } else {
+                tagBar.style.width = "0px"
+                tagForm.style.display = "none"
+                tagBarCloseButton.style.display = "none"
+                tagBarIsClosed = true
             }
         }
     }
@@ -55,38 +64,38 @@
     display: flex;
     flex-direction: column;
     width: 250px;
-    padding: 10px;
     flex-grow: 0;
     flex-shrink: 0;
     box-shadow: rgba(0, 0, 0, 0.025) -1px 0px 0px 0px inset;
     background-color: rebeccapurple;
     transition: 0.5s;
-
+    
     &-close-button {
         position: absolute;
         top: 5px; left: 2px;
     }
-
+    
     &-content {
+        padding: 10px;
         margin-top: 20px;
     }
-
+    
     &-type, &-created {
         margin-right: 5px;
     }
-
+    
     &-extension, &-modified {
         margin-left: 5px;
     }
-
+    
     &-add {
         display: flex;
         margin: 15px 0;
-
+        
         &-button {
             white-space: nowrap;
         }
-
+        
         &-divider {
             width: 100%;
             border-bottom: 1px solid white;
@@ -94,7 +103,7 @@
             
         }
     }
-
+    
     &-category {
         display: flex;
         justify-content: space-evenly;
@@ -106,7 +115,6 @@
         display: flex; 
         align-content: center; 
         justify-content: center;
-        padding: 5px;
         background-color: aquamarine;
         height: 80px;
         width: 100%;

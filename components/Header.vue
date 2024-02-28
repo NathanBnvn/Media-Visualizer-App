@@ -2,7 +2,7 @@
     <header class="header">
         <div class="header-container">
             <div class="header-container-navigation">
-                <UIButton buttonType="button" iconName="lucide:sidebar" @is-clicked="moveNavigationBar"/>
+                <UIButton buttonType="button" iconName="lucide:sidebar" @is-clicked="activateNavigationBar(isActive = !isActive)"/>
                 <UIButton buttonType="navigation" iconName="ic:baseline-arrow-back-ios-new"/>
                 <UIButton buttonType="navigation" iconName="ic:baseline-arrow-forward-ios"/>
                 <div class="header-title">Title</div>
@@ -26,23 +26,43 @@
 </template>
 
 <script lang="ts" setup>
-    
-    function moveNavigationBar(): void {
-        const navigationBar = document.getElementsByClassName('navigation-bar')[0] as HTMLInputElement | null
+    import { BrowserWindow } from 'electron';
 
-        if (navigationBar != null) {
-            if (navigationBar.style.width == "250px") {
+    var isActive:boolean = false
+
+    function activateNavigationBar(isActive: boolean): void {
+        const navigationBar = document.getElementsByClassName('navigation-bar')[0] as HTMLElement | null
+        const navigationBarContainer = document.getElementsByClassName('navigation-bar-container')[0] as HTMLElement | null
+
+        if (navigationBar != null && navigationBarContainer != null) {
+            if (isActive) {
+                navigationBarContainer.style.display = "none"                
                 navigationBar.style.width = "0px"
+                isActive = false
+                manageHeaderContainer(isActive)
             } else {
                 navigationBar.style.width = "250px"
+                navigationBarContainer.style.display = "block"
+                isActive = true
+                manageHeaderContainer(isActive)
             }
         }
     }
-// function dizzy(){
-//     document.getElementsByClassName("side-navigation-bar")[0].style.width = "0px"
-//     console.log("2")
-// }
- 
+
+    function manageHeaderContainer(navigationBarIsOpen: boolean): void {
+        const headerContainer = document.getElementsByClassName('header-container')[0] as HTMLElement | null
+        
+        
+        if(headerContainer != null){
+            if (navigationBarIsOpen) {
+                headerContainer.style.marginLeft = "0px"
+            } else {
+                headerContainer.style.marginLeft = "60px"
+            }
+        }
+    }
+    
+
 </script>
 
 <style lang="scss" scoped>

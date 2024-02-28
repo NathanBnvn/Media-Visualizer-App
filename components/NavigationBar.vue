@@ -4,6 +4,9 @@
         <div class="navigation-bar-container">
             <UIButton class="navigation-bar-button" 
             buttonName="Profil" iconName="healthicons:ui-user-profile-outline"/>
+
+            <UIButton class="navigation-bar-button"
+            buttonName="Tag Manager" iconName="solar:hashtag-circle-outline"/>
         </div>
     </nav>
 </template>
@@ -16,7 +19,6 @@
 @import './assets/scss/tools.scss';
 
 .navigation-bar {
-    //position: absolute;
     width: 250px;
     flex-grow: 0;
     flex-shrink: 0;
@@ -25,7 +27,7 @@
     //background: color(secondary);
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.025) -1px 0px 0px 0px inset;
-    transition: 0.5s;
+    transition: 0.1s ease-in-out;
 
     &-top {
         height: 35px;
