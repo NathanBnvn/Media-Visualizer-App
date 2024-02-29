@@ -23,19 +23,19 @@ $themeColors: (
 );
 
 $lightThemeColors: (
-  primary: #ffffff,
-  secondary: #fbfbfa,
-  tertiary: rgba(55, 53, 47, 0.08),
-  selected: rgb(55, 53, 47),
-  unselectedTypography: rgba(25, 23, 17, 0.6),
+  light_primary: #ffffff,
+  light_secondary: #fbfbfa,
+  light_tertiary: rgba(55, 53, 47, 0.08),
+  light_selected: rgb(55, 53, 47),
+  light_unselectedTypography: rgba(25, 23, 17, 0.6),
 );
 
 $darkThemeColors: (
-  primary: #191919,
-  secondary: #202020,
-  tertiary: rgb(155, 155, 155),
-  selected: rgba(255, 255, 255, 0.80),
-  unselectedTypography: rgb(155, 155, 155),
+  dark_primary: #191919,
+  dark_secondary: #202020,
+  dark_tertiary: rgb(155, 155, 155),
+  dark_selected: rgba(255, 255, 255, 0.80),
+  dark_unselectedTypography: rgb(155, 155, 155),
 );
 
 $systemColors: (

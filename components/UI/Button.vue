@@ -47,11 +47,11 @@
     user-select: none;
 
     &:hover {
-        background-color: color(selected, 0.08); 
+        background-color: yellow;
+        //background-color: color(selected, 0.08); 
     }
 
     &-navigation {
-        display: block;
         color: black;
         text-align: left;
         text-decoration: none;

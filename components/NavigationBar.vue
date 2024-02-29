@@ -4,7 +4,7 @@
         <div class="navigation-bar-container">
             <UIButton class="navigation-bar-button" 
             buttonType="navigation" buttonName="Profil" 
-            path="/profil" iconName="healthicons:ui-user-profile-outline"/>
+            path="/settings" iconName="healthicons:ui-user-profile-outline"/>
 
             <UIButton class="navigation-bar-button"
             buttonType="navigation" buttonName="Home" 
@@ -44,8 +44,24 @@
     }
 
     &-button {
-        padding: 5px 0px;
-        width: 100%;
+        justify-content: flex-start;
+        padding-left: 10px;
+        width: 240px;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .navigation-bar {
+        background-color: color(dark_secondary);
+        color: color(dark_unselectedTypography);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .navigation-bar {
+        background-color: color(light_secondary);
+        color: color(light_unselectedTypography);
+    }
+}
+
 </style>
