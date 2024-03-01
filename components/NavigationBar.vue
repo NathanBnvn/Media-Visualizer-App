@@ -30,11 +30,17 @@
     flex-grow: 0;
     flex-shrink: 0;
     z-index: 100;
-    background-color: darkcyan;
-    //background: color(secondary);
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.025) -1px 0px 0px 0px inset;
     transition: 0.1s ease-in-out;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: color(dark_secondary);
+    }
+
+    @media (prefers-color-scheme: light) {
+        background-color: color(light_secondary);
+    }
 
     &-top {
         height: 35px;
@@ -50,18 +56,18 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    .navigation-bar {
-        background-color: color(dark_secondary);
-        color: color(dark_unselectedTypography);
-    }
-}
+// @media (prefers-color-scheme: dark) {
+//     .navigation-bar {
+//         background-color: color(dark_secondary);
+//         color: color(dark_unselectedTypography);
+//     }
+// }
 
-@media (prefers-color-scheme: light) {
-    .navigation-bar {
-        background-color: color(light_secondary);
-        color: color(light_unselectedTypography);
-    }
-}
+// @media (prefers-color-scheme: light) {
+//     .navigation-bar {
+//         background-color: color(light_secondary);
+//         color: color(light_unselectedTypography);
+//     }
+// }
 
 </style>

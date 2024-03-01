@@ -46,13 +46,19 @@
     -webkit-user-select: none;
     user-select: none;
 
-    &:hover {
-        background-color: yellow;
-        //background-color: color(selected, 0.08); 
+    @media (prefers-color-scheme: dark) {
+        &:hover {
+            background-color: color(dark_selected, 0.08);   
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        &:hover {
+            background-color: color(light_selected, 0.08);
+        }
     }
 
     &-navigation {
-        color: black;
         text-align: left;
         text-decoration: none;
         margin: 0px 1px;
@@ -62,6 +68,16 @@
 
         &-navigation, &-bar {
             margin-right: 5px;
+        }
+    }
+
+    &-navigation, &-icon {
+        @media (prefers-color-scheme: dark) {
+            color: white;
+        }
+        
+        @media (prefers-color-scheme: light) {
+            color: black;
         }
     }
 }

@@ -4,16 +4,26 @@
         <form class="tag-bar-form">
         <div class="tag-bar-content">
             <div> 
-                <UIInput id="name" type="text"/>
+                <UIInput id="name" type="text" 
+                :has-label="true"/>
                 <div class="tag-bar-category">
-                    <UIInput class="tag-bar-type" id="type" type="text"/>
-                    <UIInput class="tag-bar-extension" id="extension" type="text"/>
+                    <UIInput class="tag-bar-type" 
+                    id="type" type="text" 
+                    :has-label="true"/>
+                    <UIInput class="tag-bar-extension" 
+                    id="extension" type="text" 
+                    :has-label="true"/>
                 </div>
                 <div class="tag-bar-category">
-                    <UIInput class="tag-bar-created" id="created" type="text"/>
-                    <UIInput class="tag-bar-modified" id="modified" type="text"/>
+                    <UIInput class="tag-bar-created" 
+                    id="created" type="text" 
+                    :has-label="true"/>
+                    <UIInput class="tag-bar-modified" 
+                    id="modified" type="text" 
+                    :has-label="true"/>
                 </div>
-                <UIInput id="path" type="text"/>
+                <UIInput id="path" type="text" 
+                :has-label="true"/>
             </div>
             <hr>
             <div class="tag-bar-add">
@@ -24,7 +34,8 @@
                 <div class="tag-bar-add-divider"/>
             </div>
             <hr>
-            <UIInput :isComment="true" id="comments"/>
+            <UIInput :isComment="true" id="comments" 
+            :has-label="true"/>
         </div>
         <div class="tag-bar-bottom">
             <input class="tag-button-submit" type="submit" value="Submit">
@@ -59,6 +70,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import './assets/scss/tools.scss';
 .tag-bar {
     position: relative;
     display: flex;
@@ -67,8 +79,17 @@
     flex-grow: 0;
     flex-shrink: 0;
     box-shadow: rgba(0, 0, 0, 0.025) -1px 0px 0px 0px inset;
-    background-color: rebeccapurple;
-    transition: 0.5s;
+    transition: 0.1s ease-in-out;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: color(dark_secondary);
+        color: color(dark_unselectedTypography);
+    }
+
+    @media (prefers-color-scheme: light) {
+        background-color: color(light_secondary);
+        color: color(light_unselectedTypography);
+    }
     
     &-close-button {
         position: absolute;

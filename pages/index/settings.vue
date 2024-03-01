@@ -1,6 +1,15 @@
 <template>
     <div style="background-color: yellow; height: 100%; width: 100%;">
         Profil
+        <form>
+            <UIInput id="" list="themes"/>
+            <datalist id="themes">
+                <option value="Dark mode"/>
+                <option value="Light mode"/>
+                <option value="System mode"/>
+            </datalist>
+            <UIInput id="select-mode" type="submit"/>
+        </form>
     </div>
 </template>
 

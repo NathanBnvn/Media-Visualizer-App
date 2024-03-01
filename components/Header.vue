@@ -72,8 +72,14 @@
     height: 35px;
     width: 100%;
     z-index: 111;
-    background-color: rgb(255, 191, 0);
     border-bottom: 1px solid #d0d0d0;
+    @media (prefers-color-scheme: dark) {
+        background-color: color(dark_secondary);
+    }
+
+    @media (prefers-color-scheme: light) {
+        background-color: color(light_secondary);
+    }
 
     &-container {
         display: flex;
