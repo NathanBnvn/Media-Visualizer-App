@@ -5,7 +5,6 @@
       <Header/>
       <NuxtPage/>
     </div>
-    <TagBar/>
   </div>
 </template>
 
