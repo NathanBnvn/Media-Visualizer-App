@@ -1,19 +1,20 @@
 <template>
     <nav class="navigation-bar">
         <div class="navigation-bar-top"/>
-        <div class="navigation-bar-container">
-            <UIButton class="navigation-bar-button" 
-            buttonType="navigation" buttonName="Profil" 
-            path="/settings" iconName="healthicons:ui-user-profile-outline"/>
-
+        <div class="navigation-bar-container">            
             <UIButton class="navigation-bar-button"
             buttonType="navigation" buttonName="Home" 
             path="/" iconName="mdi:home-circle-outline"/>
-
+            
             <UIButton class="navigation-bar-button"
             buttonType="navigation" buttonName="Tag Manager" 
             path="/tag-manager" iconName="solar:hashtag-circle-outline"/>
+            
+            <UIButton class="navigation-bar-button" 
+            buttonType="navigation" buttonName="Settings" 
+            path="/settings" iconName="iconoir:ios-settings"/>
 
+            <!-- healthicons:ui-user-profile-outline -->
         </div>
     </nav>
 </template>

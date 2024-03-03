@@ -9,14 +9,16 @@
             </div>
             <div class="header-container-action">
                 <UIButton buttonType="button" iconName="ic:round-add" @is-clicked="console.log('2')"/>
-                <UIButton buttonType="button" iconName="octicon:upload-16" @is-clicked="console.log('3')">
-                    <!--
-                        <label class="header-action-add" for="file-input"/>    
-                        <input class="header-action-add-input" type="file" style="display: none;"/>
-
-                        iconName="streamline:hierarchy-2"
-                    -->
-                </UIButton>
+                <!--
+                    
+                    iconName="streamline:hierarchy-2"
+                -->
+                <label id="x">
+                    <UIInput id="x" type="file" style="display: none;"/>
+                    <span>
+                        <UIButton buttonType="button" iconName="octicon:upload-16"/>
+                    </span>
+                </label>
                 <UIButton buttonType="button" iconName="fe:picture-square" @is-clicked="console.log('4')"/>
                 <UIButton buttonType="button" iconName="f7:folder" @is-clicked="console.log('5')"/>
                 <UIButton buttonType="button" iconName="charm:search" @is-clicked="console.log('6')"/>

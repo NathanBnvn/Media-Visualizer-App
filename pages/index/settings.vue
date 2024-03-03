@@ -1,19 +1,18 @@
 <template>
     <div style="background-color: yellow; height: 100%; width: 100%;">
-        Profil
-        <form>
-            <UIInput id="" list="themes"/>
-            <datalist id="themes">
-                <option value="Dark mode"/>
-                <option value="Light mode"/>
-                <option value="System mode"/>
-            </datalist>
-            <UIInput id="select-mode" type="submit"/>
-        </form>
+        Settings
+        <span> Selected: {{ theme }}</span>
+        <select v-model="theme">
+            <option>Dark mode</option>
+            <option>Light mode</option>
+            <option>System mode</option>
+        </select>
     </div>
 </template>
 
 <script lang="ts" setup>
+
+const theme=ref<string>()
 
 // document.getElementById('toggle-dark-mode').addEventListener('click', async () => {
 //   const isDarkMode = await window.darkMode.toggle()
