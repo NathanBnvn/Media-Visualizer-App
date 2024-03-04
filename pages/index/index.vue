@@ -1,5 +1,6 @@
 <template>
     <div class="home">
+        <Header/>
         <div class="home-container">
             <UIPicture :title="'pic 1'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
             <UIPicture :title="'pic 2'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
@@ -24,12 +25,13 @@
 <style lang="scss" scoped>
 .home {
     display: flex;
-    height: 95vh;
+    flex-direction: column;
+    height: 100vh;
     width: 100%;
 
     &-container {
         display: flex;
-        margin: 10px;
+        padding: 10px;
         flex-grow: 1;
         flex-wrap: wrap;
         overflow-x: hidden;

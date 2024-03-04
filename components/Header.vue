@@ -71,7 +71,7 @@
     position: sticky;
     top: 0;
     display: flex;
-    height: 35px;
+    height: 45px;
     width: 100%;
     z-index: 111;
     border-bottom: 1px solid #d0d0d0;

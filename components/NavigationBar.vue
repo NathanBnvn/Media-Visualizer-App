@@ -8,7 +8,7 @@
             
             <UIButton class="navigation-bar-button"
             buttonType="navigation" buttonName="Tag Manager" 
-            path="/tag-manager" iconName="solar:hashtag-circle-outline"/>
+            path="/tag/manager" iconName="solar:hashtag-circle-outline"/>
             
             <UIButton class="navigation-bar-button" 
             buttonType="navigation" buttonName="Settings" 

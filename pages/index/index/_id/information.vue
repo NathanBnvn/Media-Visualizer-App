@@ -99,7 +99,6 @@
     
     &-content {
         padding: 15px;
-        margin-top: 20px;
     }
     
     &-type, &-created {

@@ -1,6 +1,8 @@
 <template>
-    <div style="background-color: yellow; height: 100%; width: 100%;">
+    <div class="settings" style="background-color: yellow; height: 100%; width: 100%;">
         Settings
+        <div>account</div>
+        <div>link account</div>
         <span> Selected: {{ theme }}</span>
         <select v-model="theme">
             <option>Dark mode</option>
@@ -26,5 +28,9 @@ const theme=ref<string>()
 </script>
 
 <style lang="scss" scoped>
+
+.settings {
+    position: absolute;
+}
 
 </style>

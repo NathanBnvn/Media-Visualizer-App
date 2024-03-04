@@ -1,10 +1,9 @@
 <template>
   <div class="main">
     <NavigationBar/>
-    <div class="main-content">
-      <Header/>
+    <main class="main-content">
       <NuxtPage/>
-    </div>
+    </main>
   </div>
 </template>
 
