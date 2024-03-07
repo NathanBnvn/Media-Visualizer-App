@@ -2,20 +2,22 @@
     <div class="manager" style="background-color: red; height: 100%; width: 100%;">
         Tag Manager
         <div class="manager-search">
-            <form action="">
+            <form class="manager-search-form">
                 <UIInput class="manager-search-bar" 
                 id="search" type="text"/>
                 <UIInput class="manager-search-button" 
                 id="button" type="submit"/>
             </form>
         </div>
-        <div class="manager-table">
-            <div class="manager-table-header"> 
-                <div>Name</div>
-                <div>Is primary</div>
-                <div></div>
-            </div>
-        </div>
+        <table class="manager-table">
+            <tr class="manager-table-header"> 
+                <th>ID</th>
+                <th>Name</th>
+                <th>Grade</th>
+                <th>Is album</th>
+                <th>Related tags</th>
+            </tr>
+        </table>
     </div>
 </template>
 
@@ -27,11 +29,27 @@
     padding: 10px;
 
     &-search {
-        display: flex;
         margin-bottom: 20px;
+        
+        &-form {
+            display: flex;
+            margin-right: 10px;
+            background: blue;
+        }
+
+        &-bar {
+            width: 450px;
+            margin-right: 10px;
+        }
     }
 
     &-table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th {
+        border: 1px solid black;
+        margin: 0;
     }
 }
 

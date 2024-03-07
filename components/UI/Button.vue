@@ -29,6 +29,7 @@
 
 <style lang="scss" scoped>
 @import './assets/scss/tools.scss';
+
 .button {
     display: flex;
     justify-content: center;
@@ -47,13 +48,13 @@
     user-select: none;
 
     @media (prefers-color-scheme: dark) {
-        &:hover {
+        &:hover, &-navigation.router-link-exact-active {
             background-color: color(dark_selected, 0.08);   
         }
     }
 
     @media (prefers-color-scheme: light) {
-        &:hover {
+        &:hover, &-navigation.router-link-exact-active {
             background-color: color(light_selected, 0.08);
         }
     }
