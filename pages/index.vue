@@ -1,7 +1,9 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage/>
-  </NuxtLayout>
+  <div class="main">
+    <slot>
+      <NuxtPage/>
+    </slot>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -10,4 +12,8 @@
 
 
 <style lang="scss" scoped>
+.main {
+  height: 100%;
+  width: 100%;
+}
 </style>

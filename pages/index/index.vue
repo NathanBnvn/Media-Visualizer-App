@@ -28,13 +28,13 @@ definePageMeta({
 <style lang="scss" scoped>
 .home {
     display: flex;
-    flex-direction: column;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 
     &-container {
         display: flex;
         padding: 10px;
+        margin-bottom: 35px;
         flex-grow: 1;
         flex-wrap: wrap;
         overflow-x: hidden;

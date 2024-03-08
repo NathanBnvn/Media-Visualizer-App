@@ -1,26 +1,23 @@
 <template>
-    <div class="main">
+    <div class="layout">
         <NavigationBar/>
-        <main class="main-content">
-            <Header :title="headerTitle"/>
-            <!-- 
-                <slot/>
-            -->
+        <main class="layout-content">
+            <Header/>
+            <slot name="content">
+                <NuxtPage/>
+            </slot>
         </main>
     </div>
 </template>
 
 <script lang="ts" setup>
-const layoutProps = defineProps({
-    headerTitle: String
-})
 
 </script>
 
 <style lang="scss" scoped>
 @import './assets/scss/tools.scss';
 
-.main {
+.layout {
     display: flex;
     position: absolute;
     font-family: Montserrat;
@@ -30,16 +27,16 @@ const layoutProps = defineProps({
     width: 100vw;
 
     @media (prefers-color-scheme: dark) {
-            background-color: color(dark_primary);
-        }
+        background-color: color(dark_primary);
+    }
 
-        @media (prefers-color-scheme: light) {
-            background-color: color(light_primary);
-        }   
+    @media (prefers-color-scheme: light) {
+        background-color: color(light_primary);
+    }   
     
     &-content {
         flex-grow: 1;
         overflow: hidden;
     }
-    }
+}
 </style>
