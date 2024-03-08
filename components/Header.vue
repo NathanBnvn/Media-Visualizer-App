@@ -2,19 +2,16 @@
     <header class="header">
         <div class="header-container">
             <div class="header-container-navigation">
-                <UIButton buttonType="button" iconName="lucide:sidebar" @is-clicked="activateNavigationBar(isActive = !isActive)"/>
+                <UIButton buttonType="button" iconName="lucide:sidebar" 
+                @is-clicked="activateNavigationBar(isActive = !isActive)"/>
                 <UIButton buttonType="navigation" iconName="ic:baseline-arrow-back-ios-new"/>
                 <UIButton buttonType="navigation" iconName="ic:baseline-arrow-forward-ios"/>
-                <div class="header-title">Title</div>
+                <div class="header-title">{{ title }}</div>
             </div>
             <div class="header-container-action">
                 <UIButton buttonType="button" iconName="ic:round-add" @is-clicked="console.log('2')"/>
-                <!--
-                    
-                    iconName="streamline:hierarchy-2"
-                -->
-                <label id="x">
-                    <UIInput id="x" type="file" style="display: none;"/>
+                <label id="header-label-input">
+                    <UIInput id="header-label-input" type="file" style="display: none;"/>
                     <span>
                         <UIButton buttonType="button" iconName="octicon:upload-16"/>
                     </span>
@@ -29,6 +26,10 @@
 
 <script lang="ts" setup>
     var isActive:boolean = false
+
+    const headerProp = defineProps({
+        title: String
+    })
 
     function activateNavigationBar(isActive: boolean): void {
         const navigationBar = document.getElementsByClassName('navigation-bar')[0] as HTMLElement | null
@@ -71,15 +72,19 @@
     position: sticky;
     top: 0;
     display: flex;
-    height: 45px;
+    align-items: center;
+    height: 35px;
     width: 100%;
     z-index: 111;
     border-bottom: 1px solid #d0d0d0;
+    
     @media (prefers-color-scheme: dark) {
+        color: white;
         background-color: color(dark_secondary);
     }
 
     @media (prefers-color-scheme: light) {
+        color: black;
         background-color: color(light_secondary);
     }
 

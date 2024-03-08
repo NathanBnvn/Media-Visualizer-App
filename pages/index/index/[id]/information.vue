@@ -4,25 +4,26 @@
         <form class="tag-bar-form">
         <div class="tag-bar-content">
             <div> 
-                <UIInput id="name" type="text" 
+                <UIInput class="tag-bar-input" 
+                input-id="name" type="text" 
                 :has-label="true"/>
                 <div class="tag-bar-category">
-                    <UIInput class="tag-bar-type" 
-                    id="type" type="text" 
+                    <UIInput class="tag-bar-input tag-bar-type" 
+                    input-id="type" type="text" 
                     :has-label="true"/>
-                    <UIInput class="tag-bar-extension" 
-                    id="extension" type="text" 
+                    <UIInput class="tag-bar-input tag-bar-extension" 
+                    input-id="extension" type="text" 
                     :has-label="true"/>
                 </div>
                 <div class="tag-bar-category">
-                    <UIInput class="tag-bar-created" 
-                    id="created" type="text" 
+                    <UIInput class="tag-bar-input tag-bar-created" 
+                    input-id="created" type="text" 
                     :has-label="true"/>
-                    <UIInput class="tag-bar-modified" 
-                    id="modified" type="text" 
+                    <UIInput class="tag-bar-input tag-bar-modified" 
+                    input-id="modified" type="text" 
                     :has-label="true"/>
                 </div>
-                <UIInput id="path" type="text" 
+                <UIInput class="tag-bar-input" input-id="path" type="text" 
                 :has-label="true"/>
             </div>
             <hr>
@@ -99,6 +100,16 @@
     
     &-content {
         padding: 15px;
+    }
+
+    &-input {
+        @media (prefers-color-scheme: dark) {
+            background-color: color(dark_tertiary);
+        }
+        
+        @media (prefers-color-scheme: light) {
+            background-color: color(light_tertiary);
+        }
     }
     
     &-type, &-created {

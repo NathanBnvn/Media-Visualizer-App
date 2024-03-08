@@ -8,7 +8,7 @@ app.whenReady().then(() => {
       minWidth: 840,
       minHeight: 460,
       titleBarStyle: 'hidden',
-      trafficLightPosition: {x: 10, y: 10},
+      trafficLightPosition: {x: 10, y: 9},
       titleBarOverlay: true,
       
       webPreferences: {

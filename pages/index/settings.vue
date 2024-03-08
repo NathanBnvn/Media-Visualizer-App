@@ -1,18 +1,25 @@
 <template>
     <div class="settings" style="background-color: yellow; height: 100%; width: 100%;">
-        Settings
-        <div>account</div>
-        <div>link account</div>
-        <span> Selected: {{ theme }}</span>
-        <select v-model="theme">
-            <option>Dark mode</option>
-            <option>Light mode</option>
-            <option>System mode</option>
-        </select>
+        <div class="settings-container">
+            Settings
+            
+            <div>account</div>
+            <div>link account</div>
+            <span> Selected: {{ theme }}</span>
+            <select v-model="theme">
+                <option>Dark mode</option>
+                <option>Light mode</option>
+                <option>System mode</option>
+            </select>
+        </div>
     </div>
 </template>
 
 <script lang="ts" setup>
+
+definePageMeta({
+  title: 'Settings'
+})
 
 const theme=ref<string>()
 
@@ -30,7 +37,9 @@ const theme=ref<string>()
 <style lang="scss" scoped>
 
 .settings {
-    position: absolute;
+
+    &-container {
+    }
 }
 
 </style>

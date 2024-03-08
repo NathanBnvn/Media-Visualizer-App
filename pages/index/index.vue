@@ -1,6 +1,5 @@
 <template>
     <div class="home">
-        <Header/>
         <div class="home-container">
             <UIPicture :title="'pic 1'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
             <UIPicture :title="'pic 2'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
@@ -19,6 +18,10 @@
 </template>
 
 <script lang="ts" setup>
+
+definePageMeta({
+  title: 'Home'
+})
 
 </script>
 
