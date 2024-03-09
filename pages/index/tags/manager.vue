@@ -21,6 +21,7 @@
                 </tr>
             </table>
         </div>
+        <NuxtPage></NuxtPage>
     </div>
 </template>
 

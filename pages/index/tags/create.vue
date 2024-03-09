@@ -1,5 +1,9 @@
 <template>
-    
+    <div>
+        <form>
+            <UIInput/>
+        </form>
+    </div>
 </template>
 
 <script lang="ts" setup>

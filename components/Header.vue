@@ -52,13 +52,16 @@
 
     function manageHeaderContainer(navigationBarIsOpen: boolean): void {
         const headerContainer = document.getElementsByClassName('header-container')[0] as HTMLElement | null
-        
-        
         if(headerContainer != null){
-            if (navigationBarIsOpen) {
+        // @To fix -- Make it reactive 
+            if(!window.screenTop && !window.screenY) {
                 headerContainer.style.marginLeft = "0px"
             } else {
-                headerContainer.style.marginLeft = "60px"
+                if (navigationBarIsOpen) {
+                    headerContainer.style.marginLeft = "0px"
+                } else {
+                    headerContainer.style.marginLeft = "60px"
+                }
             }
         }
     }
