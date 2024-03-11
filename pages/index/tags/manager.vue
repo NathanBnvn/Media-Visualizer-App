@@ -34,6 +34,8 @@ definePageMeta({
 </script>
 
 <style lang="scss" scoped>
+@import './assets/scss/tools.scss';
+
 .manager {
     height: 100%;
     padding: 35px;

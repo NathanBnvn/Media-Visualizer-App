@@ -1,21 +1,19 @@
 <template>
-    <div class="picture">
-        <NuxtImg class="picture-content" 
-        :src="source"
-        fit="cover"
-        width="240"
-        height="240"
-        />
-        <div v-if="false" class="picture-title">{{ title }}</div>
-        <div v-if="false" class="picture-tags">tags</div>
+    <div class="picture" @click="zoom">
+        <img class="picture-content" :src="source">
     </div>
 </template>
 
 <script lang="ts" setup>
     const pictureProps = defineProps({
         source: String,
-        title: String,
     })
+
+    function zoom(){}
+
+    function getInformations(){}
+
+
 </script>
 
 <style lang="scss" scoped>
