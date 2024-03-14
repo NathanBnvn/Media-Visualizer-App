@@ -4,22 +4,14 @@
             <div class="header-container-navigation">
                 <UIButton buttonType="button" iconName="lucide:sidebar" 
                 @is-clicked="activateNavigationBar(isActive = !isActive)"/>
-                <UIButton buttonType="navigation" iconName="ic:baseline-arrow-back-ios-new"/>
+                <UIButton buttonType="navigation" 
+                iconName="ic:baseline-arrow-back-ios-new" />
                 <UIButton buttonType="navigation" iconName="ic:baseline-arrow-forward-ios"/>
-                <div class="header-title">{{ title }}</div>
+                <div class="header-breadcrumb">{{ title }}</div>
             </div>
-            <div class="header-container-action">
-                <UIButton buttonType="button" iconName="ic:round-add" @is-clicked="console.log('2')"/>
-                <label id="header-label-input">
-                    <UIInput id="header-label-input" type="file" style="display: none;"/>
-                    <span>
-                        <UIButton buttonType="button" iconName="octicon:upload-16"/>
-                    </span>
-                </label>
-                <UIButton buttonType="button" iconName="fe:picture-square" @is-clicked="console.log('4')"/>
-                <UIButton buttonType="button" iconName="f7:folder" @is-clicked="console.log('5')"/>
-                <UIButton buttonType="button" iconName="charm:search" @is-clicked="console.log('6')"/>
-            </div>
+            <!--
+                <ButtonContainer/>
+            -->
         </div>
     </header>
 </template>
@@ -32,8 +24,10 @@
     })
 
     function activateNavigationBar(isActive: boolean): void {
-        const navigationBar = document.getElementsByClassName('navigation-bar')[0] as HTMLElement | null
-        const navigationBarContainer = document.getElementsByClassName('navigation-bar-container')[0] as HTMLElement | null
+        const navigationBar = document.getElementsByClassName(
+            'navigation-bar')[0] as HTMLElement | null
+        const navigationBarContainer = document.getElementsByClassName(
+            'navigation-bar-container')[0] as HTMLElement | null
 
         if (navigationBar != null && navigationBarContainer != null) {
             if (isActive) {
@@ -51,7 +45,8 @@
     }
 
     function manageHeaderContainer(navigationBarIsOpen: boolean): void {
-        const headerContainer = document.getElementsByClassName('header-container')[0] as HTMLElement | null
+        const headerContainer = document.getElementsByClassName(
+            'header-container')[0] as HTMLElement | null
         if(headerContainer != null){
         // @To fix -- Make it reactive 
             if(!window.screenTop && !window.screenY) {
@@ -79,16 +74,16 @@
     height: 35px;
     width: 100%;
     z-index: 111;
-    border-bottom: 1px solid #d0d0d0;
+    //border-bottom: 1px solid #d0d0d0;
     
     @media (prefers-color-scheme: dark) {
         color: white;
-        background-color: color(dark_secondary);
+        background-color: color(dark_primary);
     }
 
     @media (prefers-color-scheme: light) {
         color: black;
-        background-color: color(light_secondary);
+        background-color: color(light_primary);
     }
 
     &-container {
@@ -107,7 +102,7 @@
         }
     }
     
-    &-title {
+    &-breadcrumb {
         display: flex;
         align-self: center;
         margin-left: 5px;

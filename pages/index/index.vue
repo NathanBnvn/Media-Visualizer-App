@@ -1,17 +1,42 @@
 <template>
     <div class="home">
+        <Heading/>
         <div class="home-container">
-            <UIPicture :title="'pic 1'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
-            <UIPicture :title="'pic 2'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
-            <UIPicture :title="'pic 3'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
-            <UIPicture :title="'pic 4'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
-            <UIPicture :title="'pic 5'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
-            <UIPicture :title="'pic 6'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
-            <UIPicture :title="'pic 7'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
-            <UIPicture :title="'pic 8'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
-            <UIPicture :title="'pic 9'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
-            <UIPicture :title="'pic 10'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
-            <UIPicture :title="'pic 11'" :source="'/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg'"/>
+            <div class="home-container-album">
+                <UIAlbum title="Test" path="/albums/lais"
+                source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"/>
+                <UIAlbum title="Test" path="/albums/lais"
+                source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"/>
+                <UIAlbum title="Test" path="/albums/lais"
+                source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"/>
+                <UIAlbum title="Test" path="/albums/lais"
+                source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"/>
+                <UIAlbum title="Test" path="/albums/lais"
+                source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"/>
+                <UIAlbum title="Test" path="/albums/lais"
+                source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"/>
+                <UIAlbum title="Test" path="/albums/lais"
+                source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"/>
+                <UIAlbum title="Test" path="/albums/lais"
+                source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"/>
+                <UIAlbum title="Test" path="/albums/lais"
+                source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"/>
+            </div>
+            <div class="home-container-picture">
+                <UIPicture source="/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg"/>
+                <UIPicture source="/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg"/>
+                <UIPicture source="/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg"/>
+                <UIPicture source="/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg"/>
+                <UIPicture source="/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg"/>
+                <UIPicture source="/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg"/>
+                <UIPicture source="/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg"/>
+                <UIPicture source="/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg"/>
+                <UIPicture source="/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg"/>
+                <UIPicture source="/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg"/>
+                <UIPicture source="/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg"/>
+                <UIPicture source="/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg"/>
+                <UIPicture source="/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg"/>
+            </div>
         </div>
         <NuxtPage/>
     </div>
@@ -28,17 +53,22 @@ definePageMeta({
 <style lang="scss" scoped>
 .home {
     display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
-
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
     &-container {
-        display: flex;
-        padding: 10px;
-        margin-bottom: 35px;
-        flex-grow: 1;
-        flex-wrap: wrap;
-        overflow-x: hidden;
-        overflow-y: scroll;
+        padding: 20px;
+        
+        &-album, &-picture {
+            display: flex;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+
+        }
     }
 }
 </style>

@@ -19,7 +19,7 @@
 <style lang="scss" scoped>
 .picture {
     margin: 5px;
-    width: 240px;
+    width: 236px;
 
     &-title {
         display: flex;
