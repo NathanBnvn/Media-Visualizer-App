@@ -1,31 +1,34 @@
 <template>
-    <div class="tag" :data-theme="tagColor">
-        {{ tagName }}
-    </div>    
+    <NuxtLink>
+        <div class="tag"> 
+        <!-- <div :data-theme="tagColor"> -->
+            {{ tagName }}
+        </div>
+    </NuxtLink>
 </template>
 
 <script lang="ts" setup>
     const propsTag = defineProps({
-        tagName: { 
-            type: String, 
-            required: true
-        },
-        tagColor: {
-            type: String,
-        }
+        tagName: String,
     })
 </script>
 
 <style lang="scss" scoped>
     .tag {
-        display: flex;
-        border-radius: 15px;
+        display: inline-block;
+        border-radius: 2px;
+        border: none;
+        padding: 5px 2px;
+        font-size: small;
+        // @each $name, $color in $colors {
+        //     &[data-theme='#{$name}'] {
+        //         background-color: #{$color};
+        //     }
+        // }
 
-        @each $name, $color in $colors {
-            &[data-theme='#{$name}'] {
-                background-color: #{$color};
-            }
-        }
+        background-color: orange;
+        color: white;
+
     }
 
 </style>

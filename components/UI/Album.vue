@@ -32,6 +32,11 @@ const albumProps = defineProps({
     flex-direction: column;
     width: 236px;
     margin: 5px;
+
+    // @TODO Optimize with grid ?
+    // display: grid;
+    // grid-template-columns: 2fr 1fr;
+    //grid-gap: 16px;
     
     &-cover {
         display: flex;
@@ -53,18 +58,18 @@ const albumProps = defineProps({
         &-minor {
             display: flex;
             flex-direction: column;
-            margin-left: 2px;
+            margin-left: 3px;
 
             &-first, &-second {
                 height: 50%;
             }
 
             &-first {
-                margin-bottom: 1px;
+                margin-bottom: 1.5px;
             }
 
             &-second {
-                margin-top: 1px;
+                margin-top: 1.5px;
             }
         }
     }

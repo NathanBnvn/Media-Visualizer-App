@@ -1,6 +1,6 @@
 <template>
-    <div class="picture" @click="zoom">
-        <img class="picture-content" :src="source">
+    <div class="media" @click="zoom">
+        <img class="media-picture" :src="source">
     </div>
 </template>
 
@@ -17,7 +17,7 @@
 </script>
 
 <style lang="scss" scoped>
-.picture {
+.media {
     margin: 5px;
     width: 236px;
 
@@ -26,7 +26,7 @@
         justify-content: center;
     }
 
-    &-content {
+    &-picture {
         border-radius: 5px;
     }
 }

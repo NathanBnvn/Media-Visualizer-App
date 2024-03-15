@@ -46,8 +46,9 @@ const showTags: Boolean = true
 .button-container {
     display: flex;
     justify-content: flex-end;
-    padding-bottom: 5px;
+    padding: 0px 5px 5px 0px;
     border-bottom: 1px solid black;
+    z-index: 10000;
 }
 
 </style>

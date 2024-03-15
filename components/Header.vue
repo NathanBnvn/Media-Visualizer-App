@@ -9,9 +9,6 @@
                 <UIButton buttonType="navigation" iconName="ic:baseline-arrow-forward-ios"/>
                 <div class="header-breadcrumb">{{ title }}</div>
             </div>
-            <!--
-                <ButtonContainer/>
-            -->
         </div>
     </header>
 </template>

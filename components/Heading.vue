@@ -1,10 +1,32 @@
 <template>
     <div class="heading">
-        <h1 class="heading-title">{{ title }} Home</h1>
-        <div class="heading-description" v-if="description">
-            {{ description }}
-        </div>
-        <div class="heading-tags" v-if="showTags && tags">
+        <div class="heading-text"> 
+            <h1 class="heading-title">{{ title }} Home</h1>
+            <div class="heading-description" contenteditable="true" v-if="description">
+                {{ description }}
+            </div>
+            <!--
+                v-if="showTags && tags"
+            -->
+            <div class="heading-tags" >
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+                <UITag tag-name="maximum" />
+            </div>
         </div>
         <ButtonContainer/>
     </div>
@@ -16,9 +38,8 @@ const headingProp = defineProps({
     title: String,
     description: String,
     tags: Array,
-    showTags: Boolean, 
+    showTags: Boolean,
 })
-
 
 </script>
 
@@ -26,14 +47,31 @@ const headingProp = defineProps({
 .heading {
     display: flex;
     flex-direction: column;
-    padding: 40px 5px 20px;
+    
+    @media (prefers-color-scheme: dark) {
+        color: white;
+    }
+    
+    @media (prefers-color-scheme: light) {
+        color: black;
+    }
+    
+    &-text {
+        padding: 30px 5px 15px 20px;
+    }
 
     &-title {
         font-size: x-large;
+        margin-bottom: 5px;
     }
 
-    &-title, &-description {
-        margin-left: 20px;
+    &-description {
+        width: 60%;
+        margin-bottom: 10px;
+    }
+
+    &-tags {
+        width: 80%;
     }
 }
 
