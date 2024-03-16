@@ -1,6 +1,7 @@
 <template>
     <div class="button-container">
         <UIButton button-type="button" 
+        class="button-container-button"
         icon-name="ic:round-add"
         @is-clicked="console.log('2')"/>
 
@@ -9,23 +10,27 @@
             type="file" 
             style="display: none;"/>
             <span>
-                <UIButton button-type="button" 
+                <UIButton button-type="button"
                 icon-name="octicon:upload-16"/>
             </span>
         </label>
         <UIButton button-type="button" 
+        class="button-container-button"
         icon-name="heroicons:tag-16-solid" 
         @is-clicked="showTags = !showTags"/>
         
         <UIButton button-type="button" 
+        class="button-container-button"
         icon-name="mingcute:settings-2-line" 
         @is-clicked="console.log('5')"/>
         
-        <UIButton button-type="button" 
+        <UIButton button-type="button"
+        class="button-container-button"
         icon-name="charm:search" 
         @is-clicked="console.log('6')"/>
         
-        <UIButton button-type="button" 
+        <UIButton button-type="button"
+        class="button-container-button"
         icon-name="ri:more-fill" 
         @is-clicked="console.log('7')"/>
     </div>
@@ -46,9 +51,26 @@ const showTags: Boolean = true
 .button-container {
     display: flex;
     justify-content: flex-end;
-    padding: 0px 5px 5px 0px;
-    border-bottom: 1px solid black;
-    z-index: 10000;
+    position: sticky;
+    top: 0;
+    height: 35px;
+    margin-left: auto;
+    padding: 5px 0px;
+    z-index: 112;
+
+    &-button:last-child {
+        margin-right: 5px;
+    }
+
+    &:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        height: 1px;
+        background: black;
+        width: 100vw;
+        bottom: 0px;
+    }
 }
 
 </style>

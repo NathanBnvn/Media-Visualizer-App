@@ -1,14 +1,14 @@
 <template>
     <header class="header">
         <div class="header-container">
-            <div class="header-container-navigation">
+            <nav class="header-container-navigation">
                 <UIButton buttonType="button" iconName="lucide:sidebar" 
                 @is-clicked="activateNavigationBar(isActive = !isActive)"/>
                 <UIButton buttonType="navigation" 
                 iconName="ic:baseline-arrow-back-ios-new" />
                 <UIButton buttonType="navigation" iconName="ic:baseline-arrow-forward-ios"/>
-                <div class="header-breadcrumb">{{ title }}</div>
-            </div>
+                <UIBreadcrumb/>
+            </nav>
         </div>
     </header>
 </template>
@@ -97,12 +97,6 @@
         &-navigation, &-action {
             display: flex;
         }
-    }
-    
-    &-breadcrumb {
-        display: flex;
-        align-self: center;
-        margin-left: 5px;
     }
     
 }

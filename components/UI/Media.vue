@@ -21,11 +21,6 @@
     margin: 5px;
     width: 236px;
 
-    &-title {
-        display: flex;
-        justify-content: center;
-    }
-
     &-picture {
         border-radius: 5px;
     }

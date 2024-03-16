@@ -1,11 +1,5 @@
 <template>
     <div class="home">
-        <Heading description="Lorem ipsum dolor sit amet, 
-        consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation 
-        ullamco laboris nisi ut aliquip ex ea commodo 
-        consequat." />
         <div class="home-container">
             <div class="home-container-album">
                 <UIAlbum class="home-album" 
@@ -74,19 +68,14 @@
 <script lang="ts" setup>
 
 definePageMeta({
-  title: 'Home'
+  title: 'Home',
+  layout: 'media',
 })
 
 </script>
 
 <style lang="scss" scoped>
 .home {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
     
     &-container {
         padding: 20px;

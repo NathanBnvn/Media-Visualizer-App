@@ -1,5 +1,11 @@
 <template>
-    <NuxtLink>
+    <div v-if="seletable">
+        <div class="tag"> 
+        <!-- <div :data-theme="tagColor"> -->
+            {{ tagName }}
+        </div>
+    </div>
+    <NuxtLink v-else>
         <div class="tag"> 
         <!-- <div :data-theme="tagColor"> -->
             {{ tagName }}
@@ -10,15 +16,16 @@
 <script lang="ts" setup>
     const propsTag = defineProps({
         tagName: String,
+        seletable: Boolean,
     })
 </script>
 
 <style lang="scss" scoped>
     .tag {
         display: inline-block;
-        border-radius: 2px;
+        border-radius: 4px;
         border: none;
-        padding: 5px 2px;
+        padding: 4px;
         font-size: small;
         // @each $name, $color in $colors {
         //     &[data-theme='#{$name}'] {

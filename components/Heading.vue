@@ -1,38 +1,21 @@
 <template>
     <div class="heading">
         <div class="heading-text"> 
-            <h1 class="heading-title">{{ title }} Home</h1>
+            <h1 class="heading-title">{{ route.meta.title }}</h1>
             <div class="heading-description" contenteditable="true" v-if="description">
                 {{ description }}
             </div>
-            <!--
-                v-if="showTags && tags"
-            -->
-            <div class="heading-tags" >
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
-                <UITag tag-name="maximum" />
+            <div class="heading-tags" v-if="showTags && tags">
                 <UITag tag-name="maximum" />
             </div>
         </div>
-        <ButtonContainer/>
+
     </div>
 </template>
 
 <script lang="ts" setup>
+
+const route = useRoute()
 
 const headingProp = defineProps({
     title: String,
@@ -66,11 +49,16 @@ const headingProp = defineProps({
     }
 
     &-description {
-        width: 60%;
+        width: 70%;
         margin-bottom: 10px;
     }
 
     &-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        column-gap: 4px;
+        row-gap: 4px;
         width: 80%;
     }
 }
