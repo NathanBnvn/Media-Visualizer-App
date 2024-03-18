@@ -11,6 +11,11 @@
             <div class="album-title">
                 {{ title }}
             </div>
+            <div class="album-details">
+                <div>
+                    3 pictures, 2 videos, no audio files
+                </div>
+            </div>
         </div>
     </NuxtLink>
 </template>
@@ -18,25 +23,30 @@
 <script lang="ts" setup>
 
 const albumProps = defineProps({
-        source: String,
-        path: String,
-        title: String,
-    })
+    source: String,
+    path: String,
+    title: String,
+})
+
+
 
 </script>
 
 <style lang="scss" scoped>
+@import './assets/scss/tools.scss';
 
 .album {
     display: flex;
     flex-direction: column;
-    width: 236px;
-    margin: 5px;
+    width: 290px;
 
-    // @TODO Optimize with grid ?
-    // display: grid;
-    // grid-template-columns: 2fr 1fr;
-    //grid-gap: 16px;
+    @media (prefers-color-scheme: dark) {
+        color: white;
+    }
+
+    @media (prefers-color-scheme: light) {
+        color: black;
+    }
     
     &-cover {
         display: flex;
@@ -44,7 +54,7 @@ const albumProps = defineProps({
         height: 157px;
         overflow: auto;
         border: 1px transparent solid;
-        border-radius: 10px;
+        border-radius: 10px 10px 0px 0px;
 
         &-main {
             height: 100%;
@@ -75,10 +85,23 @@ const albumProps = defineProps({
     }
 
     &-title {
-        color: white;
-        text-align: center;
         margin: 5px 0px;
+    }
+
+    &-details {
+        display: flex;
+        align-items: center;
+        font-size: smaller;
+
+        @media (prefers-color-scheme: dark) {
+            color: white;
+        }
+
+        @media (prefers-color-scheme: light) {
+            color: black;
+        }
 
     }
+
 }
 </style>

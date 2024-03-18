@@ -2,11 +2,23 @@
     <header class="header">
         <div class="header-container">
             <nav class="header-container-navigation">
-                <UIButton buttonType="button" iconName="lucide:sidebar" 
-                @is-clicked="activateNavigationBar(isActive = !isActive)"/>
-                <UIButton buttonType="navigation" 
-                iconName="ic:baseline-arrow-back-ios-new" />
-                <UIButton buttonType="navigation" iconName="ic:baseline-arrow-forward-ios"/>
+                <UIButton class="header-button-menu"
+                button-type="button" 
+                icon-name="lucide:sidebar" 
+                @is-clicked="activateNavigationBar(
+                    isActive = !isActive
+                    )"/>
+                
+                <UIButton class="header-button-return"
+                button-type="navigation" 
+                icon-name="ic:baseline-arrow-back-ios-new"
+                @is-clicked="router.back"/>
+
+                <UIButton class="header-button-next"
+                button-type="navigation" 
+                icon-name="ic:baseline-arrow-forward-ios"
+                @is-clicked="router.forward"/>
+
                 <UIBreadcrumb/>
             </nav>
         </div>
@@ -15,10 +27,8 @@
 
 <script lang="ts" setup>
     var isActive:boolean = false
-
-    const headerProp = defineProps({
-        title: String
-    })
+    const router = useRouter()
+    console.log(router)
 
     function activateNavigationBar(isActive: boolean): void {
         const navigationBar = document.getElementsByClassName(
@@ -57,12 +67,12 @@
             }
         }
     }
-    
 
 </script>
 
 <style lang="scss" scoped>
 @import './assets/scss/tools.scss';
+
 .header {
     position: sticky;
     top: 0;
@@ -96,6 +106,7 @@
 
         &-navigation, &-action {
             display: flex;
+            align-items: center;
         }
     }
     

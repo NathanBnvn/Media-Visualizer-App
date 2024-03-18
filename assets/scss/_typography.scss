@@ -1,0 +1,108 @@
+/**
+ * Scales
+ */
+
+//base $mq-base-font-size fixed
+$sizes: (
+  xx-small: 10px,
+  x-small: 12px,
+  small: 14px,
+  semi: 16px,
+  normal: 18px,  /* default */
+  large: 22px,
+  x-large: 26px,
+  xx-large: 40px,
+  xxx-large: 50px,
+);
+
+
+/**
+ * Weights
+ */
+
+$weights: (
+  thin: 300,
+  regular: 400, /* default */
+  bold: 500,
+);
+
+
+/**
+ * Front-end function.
+ */
+
+@function size($name) {
+  @if map-get($mq-context, until) {
+    $breakpoint: map-get($mq-context, until);
+  } @else {
+    $breakpoint: map-get($mq-context, from);
+  }
+  @return map-get($sizes, $name);
+}
+
+@function weight($name) {
+  @return map-get($weights, $name);
+}
+
+
+/**
+ * Mixins
+ */
+
+@mixin typography-impl($args) {
+  $breakpoint: (length($mq-context) > 0);
+
+  @each $arg in $args {
+
+    @if $arg == uppercase { text-transform: uppercase; }
+    @else if $arg == lowercase { text-transform: lowercase; }
+    @else if $arg == underline { text-decoration: underline; }
+    @else if $arg == italic { font-style: italic; }
+    @else if $arg == justify { text-align: justify; }
+    @else if $arg == center { text-align: center; }
+    @else if $arg == right { text-align: right; }
+
+    @else if $arg == nowrap { white-space: nowrap; }
+    @else if $arg == crop {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      display: block;
+    }
+    @else {
+      @if map-has-key($sizes, $arg) {
+        font-size: size($arg);
+        line-height: #{size($arg)};
+      }
+      @else if map-has-key($weights, $arg) {
+        font-weight: weight($arg);
+        @if $arg == heavy {
+          -webkit-font-smoothing: antialiased;
+        }
+      }
+      @else if map-has-key($colors, $arg) {
+        color: color($arg);
+      }
+    }
+  }
+}
+
+@mixin typo(
+  $desktop: false,
+  $mobile: false,
+  $tablet: false
+) {
+  @include typography-impl($desktop);
+
+  @if false != $mobile {
+    @include mq($until: mobile) {
+      @include typography-impl($mobile);
+    }
+  }
+
+  @if false != $tablet {
+    @include mq($until: tablet) {
+      @include typography-impl($tablet);
+    }
+  }
+}

@@ -18,8 +18,8 @@
 
 <style lang="scss" scoped>
 .media {
-    margin: 5px;
-    width: 236px;
+    margin: 3px;
+    width: 290px;
 
     &-picture {
         border-radius: 5px;

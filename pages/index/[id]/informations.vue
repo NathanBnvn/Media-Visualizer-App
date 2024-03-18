@@ -1,69 +1,69 @@
 <template>
-    <nav class="tag-bar">
-        <UIButton class="tag-bar-close-button" buttonType="button" iconName="mi:close" @is-clicked="closeTagBar"/>
-        <form class="tag-bar-form">
-        <div class="tag-bar-content">
+    <article class="informations">
+        <UIButton class="informations-close-button" buttonType="button" iconName="mi:close" @is-clicked="closeInformations"/>
+        <form class="informations-form">
+        <div class="informations-content">
             <div> 
-                <UIInput class="tag-bar-input" 
+                <UIInput class="informations-input" 
                 input-id="name" type="text" 
                 :has-label="true"/>
-                <div class="tag-bar-category">
-                    <UIInput class="tag-bar-input tag-bar-type" 
+                <div class="informations-category">
+                    <UIInput class="informations-input informations-type" 
                     input-id="type" type="text" 
                     :has-label="true"/>
-                    <UIInput class="tag-bar-input tag-bar-extension" 
+                    <UIInput class="informations-input informations-extension" 
                     input-id="extension" type="text" 
                     :has-label="true"/>
                 </div>
-                <div class="tag-bar-category">
-                    <UIInput class="tag-bar-input tag-bar-created" 
+                <div class="informations-category">
+                    <UIInput class="informations-input informations-created" 
                     input-id="created" type="text" 
                     :has-label="true"/>
-                    <UIInput class="tag-bar-input tag-bar-modified" 
+                    <UIInput class="informations-input informations-modified" 
                     input-id="modified" type="text" 
                     :has-label="true"/>
                 </div>
-                <UIInput class="tag-bar-input" input-id="path" type="text" 
+                <UIInput class="informations-input" input-id="path" type="text" 
                 :has-label="true"/>
             </div>
             <hr>
-            <div class="tag-bar-add">
-                <UIButton class="tag-bar-add-button" 
+            <div class="informations-add">
+                <UIButton class="informations-add-button" 
                 buttonType="bar" 
                 iconName="gala:add" 
                 buttonName="Add a tag"/>
-                <div class="tag-bar-add-divider"/>
+                <div class="informations-add-divider"/>
             </div>
             <hr>
             <UIInput :isComment="true" id="comments" 
             :has-label="true"/>
         </div>
-        <div class="tag-bar-bottom">
+        <div class="informations-bottom">
             <input class="tag-button-submit" type="submit" value="Submit">
         </div>
         </form>
-    </nav>
+    </article>
 </template>
 
 <script lang="ts" setup>
 
-    function closeTagBar(): void {
-        const tagBar = document.getElementsByClassName('tag-bar')[0] as HTMLInputElement | null
-        const tagForm = document.getElementsByClassName('tag-bar-form')[0] as HTMLInputElement | null
-        const tagBarCloseButton = document.getElementsByClassName('tag-bar-close-button')[0] as HTMLElement | null
-        let tagBarIsClosed: boolean = false
+    function closeInformations(): void {
+        const informations = document.getElementsByClassName('informations')[0] as HTMLInputElement | null
+        const informationsForm = document.getElementsByClassName('informations-form')[0] as HTMLInputElement | null
+        const informationsCloseButton = document.getElementsByClassName('informations-close-button')[0] as HTMLElement | null
+        let informationsIsClosed: boolean = false
         
-        if (tagBar != null && tagForm != null && tagBarCloseButton != null) {
-            if (tagBarIsClosed) {
-                tagBar.style.width = "250px"
-                tagForm.style.display = "flex"
-                tagBarCloseButton.style.display = "flex"
-                tagBarIsClosed = false
+        if (informations != null && informationsForm != null && informationsCloseButton != null) {
+            if (informationsIsClosed) {
+                informations.style.width = "250px"
+                informationsForm.style.display = "flex"
+                informationsCloseButton.style.display = "flex"
+                informationsIsClosed = false
             } else {
-                tagBar.style.width = "0px"
-                tagForm.style.display = "none"
-                tagBarCloseButton.style.display = "none"
-                tagBarIsClosed = true
+                informations.style.width = "0px"
+                informationsForm.style.display = "none"
+                informationsCloseButton.style.display = "none"
+                informationsIsClosed = true
             }
         }
     }
@@ -72,7 +72,8 @@
 
 <style lang="scss" scoped>
 @import './assets/scss/tools.scss';
-.tag-bar {
+
+.informations {
     position: relative;
     display: flex;
     flex-direction: column;

@@ -1,7 +1,7 @@
 <template>
-    <div class="button-container">
+    <div class="header">
         <UIButton button-type="button" 
-        class="button-container-button"
+        class="header-button"
         icon-name="ic:round-add"
         @is-clicked="console.log('2')"/>
 
@@ -15,22 +15,22 @@
             </span>
         </label>
         <UIButton button-type="button" 
-        class="button-container-button"
+        class="header-button"
         icon-name="heroicons:tag-16-solid" 
         @is-clicked="showTags = !showTags"/>
         
         <UIButton button-type="button" 
-        class="button-container-button"
+        class="header-button"
         icon-name="mingcute:settings-2-line" 
         @is-clicked="console.log('5')"/>
         
         <UIButton button-type="button"
-        class="button-container-button"
+        class="header-button"
         icon-name="charm:search" 
         @is-clicked="console.log('6')"/>
         
         <UIButton button-type="button"
-        class="button-container-button"
+        class="header-button"
         icon-name="ri:more-fill" 
         @is-clicked="console.log('7')"/>
     </div>
@@ -48,7 +48,7 @@ const showTags: Boolean = true
 
 <style lang="scss" scoped>
 
-.button-container {
+.header {
     display: flex;
     justify-content: flex-end;
     position: sticky;
@@ -67,7 +67,7 @@ const showTags: Boolean = true
         display: block;
         position: absolute;
         height: 1px;
-        background: black;
+        background-color: black;
         width: 100vw;
         bottom: 0px;
     }

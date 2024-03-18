@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <div class="home-container">
-            <div class="home-container-album">
+            <div class="home-container-album" v-if="true">
                 <UIAlbum class="home-album" 
                 title="Test" path="/albums/lais"
                 source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"/>
@@ -82,9 +82,18 @@ definePageMeta({
         
         &-album, &-media {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(236px, max-content));
+            grid-template-columns: repeat(
+                auto-fit, minmax(290px, max-content)
+                );
             justify-content: center;
-            margin-bottom: 40px;
+        }
+        &-album {
+            row-gap: 30px;
+            column-gap: 10px;
+            margin-bottom: 80px;
+        }
+        &-media {
+            margin-bottom: 20px;
         }
     }
 }

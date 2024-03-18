@@ -40,7 +40,9 @@ const themeSelector = document.getElementsByClassName('settings-theme-selector')
 // })
 
 function dismiss(){
-    console.log(1)   
+    console.log(1)
+    const router = useRouter()
+    router.go(-1)
 }
 </script>
 
