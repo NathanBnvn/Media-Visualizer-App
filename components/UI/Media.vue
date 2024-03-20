@@ -1,6 +1,7 @@
 <template>
     <div class="media" @click="zoom">
         <img class="media-picture" :src="source">
+        <!-- <video></video> -->
     </div>
 </template>
 
@@ -20,10 +21,6 @@
 .media {
     margin: 3px;
     width: 290px;
-
-    &-picture {
-        border-radius: 5px;
-    }
 }
 
 </style>

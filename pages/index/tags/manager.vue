@@ -1,14 +1,6 @@
 <template>
     <div class="manager">
-        <div class="manager-search">
-            <form class="manager-search-form">
-                <UIInput class="manager-search-bar" 
-                id="search" type="text"/>
-                <UIInput class="manager-search-button" 
-                id="button" type="submit"/>
-            </form>
-        </div>
-        <UIButton></UIButton>
+        <SearchBar/>
         <div> 
             <table class="manager-table">
                 <tr class="manager-table-header"> 

@@ -45,6 +45,12 @@
         
         &-field {
             height: 20px;
+            padding-left: 5px;
+
+            &::placeholder {
+                font-style: italic;
+                font-size: small;
+            }
         }
 
         &-textarea {

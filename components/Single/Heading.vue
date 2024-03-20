@@ -1,12 +1,18 @@
 <template>
     <div class="heading">
         <div class="heading-text"> 
-            <h1 class="heading-title">{{ route.meta.title }}</h1>
-            <div class="heading-description" contenteditable="true" v-if="description">
+            <h1 class="heading-title">
+                {{ route.meta.title }}
+            </h1>
+            <div class="heading-description" 
+            contenteditable="true" 
+            data-text="Add a description...">
                 {{ description }}
             </div>
-            <div class="heading-tags" v-if="showTags && tags">
+            <div class="heading-tags" v-if="showTags == false">
                 <UITag tag-name="maximum" />
+                <UIInput class="heading-tags-input" 
+                type="text" placeholder="Add a tag"/>
             </div>
         </div>
 
@@ -16,10 +22,10 @@
 <script lang="ts" setup>
 
 const route = useRoute()
+const description: string = ""
 
 const headingProp = defineProps({
     title: String,
-    description: String,
     tags: Array,
     showTags: Boolean,
 })
@@ -45,12 +51,19 @@ const headingProp = defineProps({
 
     &-title {
         font-size: x-large;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     &-description {
         width: 70%;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+
+        &[contentEditable=true]:empty:not(:focus):before{
+            content:attr(data-text);
+            font-style: italic;
+            font-size: small;
+            color: gray;
+        }
     }
 
     &-tags {
@@ -60,7 +73,12 @@ const headingProp = defineProps({
         column-gap: 4px;
         row-gap: 4px;
         width: 80%;
+
+    }
+    &-tags-input :active, 
+    &-tags-input :focus, 
+    &-description {
+        outline: none;
     }
 }
-
 </style>

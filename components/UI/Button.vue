@@ -2,22 +2,30 @@
     <NuxtLink v-if='buttonType == "navigation"' 
     class="button button-navigation" 
     @click="$emit('isClicked')" :to="path">
-        <Icon class="button-icon button-icon-navigation" 
+        
+        <Icon v-if="iconName"
+        class="button-icon button-icon-navigation" 
         :name="iconName"/>
-        {{ buttonName }}
+        
+        <div v-if="buttonName" 
+        class="button-navigation-name">
+            {{ buttonName }}
+        </div>
     </NuxtLink>
+    
     <div v-else-if='buttonType == "button"' 
     class="button" 
     @click="$emit('isClicked')">
-        <Icon class="button-icon" 
+        <Icon v-if="iconName"
+        class="button-icon" 
         :name="iconName"/>
-        <slot>
-        </slot>
     </div>
+    
     <div v-else class="button-bar">
-        <div class="button-name" v-if="buttonName">
-            <Icon class="button-icon button-icon-bar" 
-            :name="iconName"/>
+        <Icon v-if="iconName"
+        class="button-icon button-icon-bar" 
+        :name="iconName"/>
+        <div v-if="buttonName" class="button-name">
             {{ buttonName }}
         </div>
     </div>
@@ -70,11 +78,14 @@
         text-align: center;
         text-decoration: none;
         margin: 0px 1px;
+
+        &-name {
+            margin-left: 5px;
+        }
     }
 
     &-icon {
-
-        &-navigation, &-bar {
+        &-bar {
             margin-right: 5px;
         }
     }

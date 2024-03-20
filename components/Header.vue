@@ -19,7 +19,7 @@
                 icon-name="ic:baseline-arrow-forward-ios"
                 @is-clicked="router.forward"/>
 
-                <UIBreadcrumb/>
+                <UIBreadcrumb class="header-breadcrumb"/>
             </nav>
         </div>
     </header>
@@ -81,7 +81,6 @@
     height: 35px;
     width: 100%;
     z-index: 111;
-    //border-bottom: 1px solid #d0d0d0;
     
     @media (prefers-color-scheme: dark) {
         color: white;
@@ -108,6 +107,10 @@
             display: flex;
             align-items: center;
         }
+    }
+
+    &-breadcrumb {
+        margin-left: 5px;
     }
     
 }

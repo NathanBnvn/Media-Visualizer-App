@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <UIButton button-type="button" 
-        class="header-button"
+        class="header-button-add"
         icon-name="ic:round-add"
         @is-clicked="console.log('2')"/>
 
@@ -17,7 +17,7 @@
         <UIButton button-type="button" 
         class="header-button"
         icon-name="heroicons:tag-16-solid" 
-        @is-clicked="showTags = !showTags"/>
+        @is-clicked="console.log('3')"/>
         
         <UIButton button-type="button" 
         class="header-button"
