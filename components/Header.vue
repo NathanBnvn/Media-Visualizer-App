@@ -10,12 +10,12 @@
                     )"/>
                 
                 <UIButton class="header-button-return"
-                button-type="navigation" 
+                button-type="button" 
                 icon-name="ic:baseline-arrow-back-ios-new"
                 @is-clicked="router.back"/>
 
                 <UIButton class="header-button-next"
-                button-type="navigation" 
+                button-type="button" 
                 icon-name="ic:baseline-arrow-forward-ios"
                 @is-clicked="router.forward"/>
 
@@ -28,7 +28,6 @@
 <script lang="ts" setup>
     var isActive:boolean = false
     const router = useRouter()
-    console.log(router)
 
     function activateNavigationBar(isActive: boolean): void {
         const navigationBar = document.getElementsByClassName(

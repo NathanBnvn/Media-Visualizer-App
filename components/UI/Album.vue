@@ -2,8 +2,8 @@
     <NuxtLink :to="path">
         <div class="album">
             <div class="album-cover">
-                <img class="album-cover-main" :src="source">
-                <div class="album-cover-minor"> 
+                <img class="album-cover-main" src="/aiony-haust-3TLl_97HNJo-unsplash.jpg">
+                <div class="album-cover-minor">
                     <img class="album-cover-minor-first" :src="source">
                     <img class="album-cover-minor-second" :src="source">
                 </div>
@@ -52,8 +52,8 @@ const albumProps = defineProps({
         display: flex;
         flex-direction: row;
         height: 157px;
-        overflow: auto;
-        border: 1px transparent solid;
+        overflow: hidden;
+        border: none;
         border-radius: 10px 10px 0px 0px;
 
         &-main {

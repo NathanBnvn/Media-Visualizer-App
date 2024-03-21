@@ -43,7 +43,7 @@
                 source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"/>
                 <UIAlbum class="home-album"
                 title="Test" path="/albums/lais"
-                source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"/>
+                />
             </div>
             <div class="home-container-media">
                 <UIMedia class="home-media" source="/v-srinivasan-gVWE1OBE_Z0-unsplash.jpg"/>

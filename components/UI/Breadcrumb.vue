@@ -17,6 +17,13 @@
 
 <script lang="ts" setup>
 
+const router = useRouter()
+
+console.log(router.currentRoute.value.fullPath)
+console.log(router.currentRoute.value.meta.title)
+
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -31,7 +38,6 @@
       font-size: small;
     }
     
-    /* Add a slash symbol (/) before/behind each list item */
     & li+li:before {
         content: "/\00a0";
         padding: 0px 2px;

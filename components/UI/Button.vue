@@ -1,7 +1,7 @@
 <template>
     <NuxtLink v-if='buttonType == "navigation"' 
     class="button button-navigation" 
-    @click="$emit('isClicked')" :to="path">
+    :to="path">
         
         <Icon v-if="iconName"
         class="button-icon button-icon-navigation" 

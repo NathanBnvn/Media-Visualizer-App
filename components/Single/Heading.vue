@@ -11,8 +11,7 @@
             </div>
             <div class="heading-tags" v-if="showTags == false">
                 <UITag tag-name="maximum" />
-                <UIInput class="heading-tags-input" 
-                type="text" placeholder="Add a tag"/>
+                <SingleTagCreator />
             </div>
         </div>
 
@@ -33,6 +32,7 @@ const headingProp = defineProps({
 </script>
 
 <style lang="scss" scoped>
+
 .heading {
     display: flex;
     flex-direction: column;
@@ -57,8 +57,9 @@ const headingProp = defineProps({
     &-description {
         width: 70%;
         margin-bottom: 20px;
+        outline: none;
 
-        &[contentEditable=true]:empty:not(:focus):before{
+        &[contentEditable=true]:empty:before {
             content:attr(data-text);
             font-style: italic;
             font-size: small;
@@ -74,11 +75,6 @@ const headingProp = defineProps({
         row-gap: 4px;
         width: 80%;
 
-    }
-    &-tags-input :active, 
-    &-tags-input :focus, 
-    &-description {
-        outline: none;
     }
 }
 </style>
