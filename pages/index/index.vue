@@ -1,3 +1,12 @@
+<script lang="ts" setup>
+
+definePageMeta({
+  title: 'Home',
+  layout: 'media',
+})
+
+</script>
+
 <template>
     <div class="home">
         <div class="home-container">
@@ -41,6 +50,7 @@
                 <UIAlbum class="home-album"
                 title="Test" path="/albums/lais"
                 source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"/>
+                
                 <UIAlbum class="home-album"
                 title="Test" path="/albums/lais"
                 />
@@ -65,18 +75,9 @@
     </div>
 </template>
 
-<script lang="ts" setup>
-
-definePageMeta({
-  title: 'Home',
-  layout: 'media',
-})
-
-</script>
-
 <style lang="scss" scoped>
+
 .home {
-    
     &-container {
         padding: 20px;
         

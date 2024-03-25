@@ -1,3 +1,10 @@
+<script lang="ts" setup>
+    const propsTag = defineProps({
+        tagName: String,
+        seletable: Boolean,
+    })
+</script>
+
 <template>
     <div v-if="seletable">
         <div class="tag"> 
@@ -13,16 +20,9 @@
     </NuxtLink>
 </template>
 
-<script lang="ts" setup>
-    const propsTag = defineProps({
-        tagName: String,
-        seletable: Boolean,
-    })
-</script>
-
 <style lang="scss" scoped>
     .tag {
-        display: inline-block;
+        display: block;
         border-radius: 4px;
         border: none;
         padding: 4px;

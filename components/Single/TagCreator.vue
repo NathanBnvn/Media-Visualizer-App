@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+
+</script>
+
 <template>
     <div class="tag-creator">
         <Icon class="tag-creator-icon" name="heroicons:tag-16-solid"/>
@@ -5,11 +9,6 @@
         type="text" placeholder="Add a tag"/>
     </div>
 </template>
-
-<script lang="ts" setup>
-
-
-</script>
 
 <style lang="scss" scoped>
 

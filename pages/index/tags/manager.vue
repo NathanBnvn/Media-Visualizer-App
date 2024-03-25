@@ -1,3 +1,11 @@
+<script lang="ts" setup>
+
+definePageMeta({
+  title: 'Tag Manager'
+})
+
+</script>
+
 <template>
     <div class="manager">
         <SearchBar/>
@@ -16,14 +24,6 @@
         <NuxtPage></NuxtPage>
     </div>
 </template>
-
-<script lang="ts" setup>
-
-definePageMeta({
-  title: 'Tag Manager'
-})
-
-</script>
 
 <style lang="scss" scoped>
 @import './assets/scss/tools.scss';

@@ -1,3 +1,6 @@
+<script lang="ts" setup>
+</script>
+
 <template>
     <div class="search-bar">
         <form class="search-bar-form">
@@ -9,9 +12,6 @@
         </form>
     </div>
 </template>
-
-<script lang="ts" setup>
-</script>
 
 <style lang="scss" scoped>
 

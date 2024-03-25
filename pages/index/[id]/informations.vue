@@ -1,3 +1,28 @@
+<script lang="ts" setup>
+
+    function closeInformations(): void {
+        const informations = document.getElementsByClassName('informations')[0] as HTMLInputElement | null
+        const informationsForm = document.getElementsByClassName('informations-form')[0] as HTMLInputElement | null
+        const informationsCloseButton = document.getElementsByClassName('informations-close-button')[0] as HTMLElement | null
+        let informationsIsClosed: boolean = false
+        
+        if (informations != null && informationsForm != null && informationsCloseButton != null) {
+            if (informationsIsClosed) {
+                informations.style.width = "250px"
+                informationsForm.style.display = "flex"
+                informationsCloseButton.style.display = "flex"
+                informationsIsClosed = false
+            } else {
+                informations.style.width = "0px"
+                informationsForm.style.display = "none"
+                informationsCloseButton.style.display = "none"
+                informationsIsClosed = true
+            }
+        }
+    }
+
+</script>
+
 <template>
     <article class="informations">
         <UIButton class="informations-close-button" buttonType="button" iconName="mi:close" @is-clicked="closeInformations"/>
@@ -44,31 +69,6 @@
         </form>
     </article>
 </template>
-
-<script lang="ts" setup>
-
-    function closeInformations(): void {
-        const informations = document.getElementsByClassName('informations')[0] as HTMLInputElement | null
-        const informationsForm = document.getElementsByClassName('informations-form')[0] as HTMLInputElement | null
-        const informationsCloseButton = document.getElementsByClassName('informations-close-button')[0] as HTMLElement | null
-        let informationsIsClosed: boolean = false
-        
-        if (informations != null && informationsForm != null && informationsCloseButton != null) {
-            if (informationsIsClosed) {
-                informations.style.width = "250px"
-                informationsForm.style.display = "flex"
-                informationsCloseButton.style.display = "flex"
-                informationsIsClosed = false
-            } else {
-                informations.style.width = "0px"
-                informationsForm.style.display = "none"
-                informationsCloseButton.style.display = "none"
-                informationsIsClosed = true
-            }
-        }
-    }
-
-</script>
 
 <style lang="scss" scoped>
 @import './assets/scss/tools.scss';

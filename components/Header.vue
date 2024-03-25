@@ -1,30 +1,3 @@
-<template>
-    <header class="header">
-        <div class="header-container">
-            <nav class="header-container-navigation">
-                <UIButton class="header-button-menu"
-                button-type="button" 
-                icon-name="lucide:sidebar" 
-                @is-clicked="activateNavigationBar(
-                    isActive = !isActive
-                    )"/>
-                
-                <UIButton class="header-button-return"
-                button-type="button" 
-                icon-name="ic:baseline-arrow-back-ios-new"
-                @is-clicked="router.back"/>
-
-                <UIButton class="header-button-next"
-                button-type="button" 
-                icon-name="ic:baseline-arrow-forward-ios"
-                @is-clicked="router.forward"/>
-
-                <UIBreadcrumb class="header-breadcrumb"/>
-            </nav>
-        </div>
-    </header>
-</template>
-
 <script lang="ts" setup>
     var isActive:boolean = false
     const router = useRouter()
@@ -68,6 +41,38 @@
     }
 
 </script>
+
+
+<template>
+    <header class="header">
+        <div class="header-container">
+            <nav class="header-container-navigation">
+                <UIButton 
+                class="header-button-menu"
+                button-type="button" 
+                icon-name="lucide:sidebar" 
+                @is-clicked="activateNavigationBar(
+                    isActive = !isActive
+                    )"/>
+                
+                <UIButton 
+                class="header-button-return"
+                button-type="button" 
+                icon-name="ic:baseline-arrow-back-ios-new"
+                @is-clicked="router.back"/>
+
+                <UIButton 
+                class="header-button-next"
+                button-type="button" 
+                icon-name="ic:baseline-arrow-forward-ios"
+                @is-clicked="router.forward"/>
+
+                <UIBreadcrumb class="header-breadcrumb"/>
+            </nav>
+        </div>
+    </header>
+</template>
+
 
 <style lang="scss" scoped>
 @import './assets/scss/tools.scss';

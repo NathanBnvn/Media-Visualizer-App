@@ -1,3 +1,6 @@
+<script lang="ts" setup>
+</script>
+
 <template>
     <nav class="navigation-bar">
         <div class="navigation-bar-top"/>
@@ -21,10 +24,6 @@
         </div>
     </nav>
 </template>
-
-<script lang="ts" setup>
-
-</script>
 
 <style lang="scss" scoped>
 @import './assets/scss/tools.scss';

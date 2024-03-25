@@ -1,3 +1,13 @@
+<script lang="ts" setup>
+
+const showTags: Boolean = true
+
+// const buttonContainerProp = defineProps({
+
+// })
+
+</script>
+
 <template>
     <div class="header">
         <UIButton button-type="button" 
@@ -5,15 +15,18 @@
         icon-name="ic:round-add"
         @is-clicked="console.log('2')"/>
 
-        <label id="header-label-input">
-            <UIInput id="header-label-input" 
-            type="file" 
-            style="display: none;"/>
-            <span>
-                <UIButton button-type="button"
-                icon-name="octicon:upload-16"/>
-            </span>
-        </label>
+        <form method="post" enctype="multipart/form-data">
+            <label id="header-label-input">
+                <UIInput id="header-label-input" 
+                type="file" 
+                style="display: none;"/>
+                <span>
+                    <UIButton button-type="button"
+                    icon-name="octicon:upload-16"/>
+                </span>
+            </label>
+        </form>
+
         <UIButton button-type="button" 
         class="header-button"
         icon-name="heroicons:tag-16-solid" 
@@ -36,15 +49,6 @@
     </div>
 </template>
 
-<script lang="ts" setup>
-
-const showTags: Boolean = true
-
-// const buttonContainerProp = defineProps({
-
-// })
-
-</script>
 
 <style lang="scss" scoped>
 

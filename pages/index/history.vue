@@ -1,9 +1,3 @@
-<template>
-    <div style="background-color: blue; height: 100%; width: 100%;">
-
-    </div>
-</template>
-
 <script lang="ts" setup>
 
 definePageMeta({
@@ -11,6 +5,12 @@ definePageMeta({
 })
 
 </script>
+
+<template>
+    <div style="background-color: blue; height: 100%; width: 100%;">
+
+    </div>
+</template>
 
 <style lang="scss" scoped>
 

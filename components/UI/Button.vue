@@ -1,3 +1,13 @@
+<script lang="ts" setup>
+    const propsButton = defineProps({
+        path: String,
+        iconName: String,
+        buttonName: String,
+        buttonType: String,
+    })
+
+</script>
+
 <template>
     <NuxtLink v-if='buttonType == "navigation"' 
     class="button button-navigation" 
@@ -30,16 +40,6 @@
         </div>
     </div>
 </template>
-
-<script lang="ts" setup>
-    const propsButton = defineProps({
-        path: String,
-        iconName: String,
-        buttonName: String,
-        buttonType: String,
-    })
-
-</script>
 
 
 <style lang="scss" scoped>

@@ -1,3 +1,16 @@
+<script lang="ts" setup>
+
+const route = useRoute()
+const description: string = ""
+
+const headingProp = defineProps({
+    title: String,
+    tags: Array,
+    showTags: Boolean,
+})
+
+</script>
+
 <template>
     <div class="heading">
         <div class="heading-text"> 
@@ -18,18 +31,6 @@
     </div>
 </template>
 
-<script lang="ts" setup>
-
-const route = useRoute()
-const description: string = ""
-
-const headingProp = defineProps({
-    title: String,
-    tags: Array,
-    showTags: Boolean,
-})
-
-</script>
 
 <style lang="scss" scoped>
 

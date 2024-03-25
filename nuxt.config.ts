@@ -6,8 +6,6 @@ export default defineNuxtConfig({
   // Global page headers: https://go.nuxtjs.dev/config-head
   app: {
     head: {
-      title: '',
-      titleTemplate: '%s',
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
     },
@@ -24,9 +22,14 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts', 
     'nuxt-icon', 
     '@nuxt/image', 
-    '@pinia/nuxt',
-    '@nuxt/ui'
+    ['@pinia/nuxt', {
+        autoImports: ["defineStore", "acceptHMRUpdate"]
+    }],
   ],
+
+  imports: {
+    dirs: ['stores']
+  },
 
   devtools: { enabled: true },
   electron: {
@@ -37,6 +40,7 @@ export default defineNuxtConfig({
       },
     ],
   },
+
   googleFonts: {
     display: 'swap',
     families: {
@@ -44,7 +48,8 @@ export default defineNuxtConfig({
     }
   },
   //nuxtIcon: {},
-  image: {},
-  
+  image: {
+    // domains allow to be used in nuxt-img
+    domains: [""],
+  },  
 })
-

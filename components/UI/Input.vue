@@ -1,16 +1,3 @@
-<template>
-    <div class="input">
-        <label v-if="hasLabel" class="input-label" :for="inputId">
-            {{ inputId }}
-        </label>
-        <textarea v-if="isComment" :id="inputId" class="input-input input-textarea">
-        </textarea>
-        <input v-else class="input-input input-input-field" 
-        :list="list" :type="type" :id="inputId" 
-        :name="inputId" :placeholder="placeholder">
-    </div>
-</template>
-
 <script lang="ts" setup>
     const propsInput = defineProps({
         inputId: String,
@@ -21,6 +8,29 @@
         isComment: Boolean,
     })
 </script>
+
+<template>
+    <div class="input">
+        <label v-if="hasLabel" 
+        class="input-label" 
+        :for="inputId">
+            {{ inputId }}
+        </label>
+        
+        <textarea v-if="isComment"
+        class="input-input input-textarea"
+        :id="inputId" 
+        />
+        
+        <input v-else 
+        class="input-input input-input-field" 
+        :list="list" 
+        :type="type" 
+        :id="inputId" 
+        :name="inputId" 
+        :placeholder="placeholder">
+    </div>
+</template>
 
 <style lang="scss" scoped>
 @import './assets/scss/tools.scss';
@@ -50,6 +60,10 @@
             &::placeholder {
                 font-style: italic;
                 font-size: small;
+            }
+
+            &::-webkit-search-cancel-button {
+                display: block;
             }
         }
 

@@ -1,3 +1,14 @@
+<script lang="ts" setup>
+
+const router = useRouter()
+
+var breadcrumb = {}
+
+console.log(router.currentRoute.value.fullPath)
+console.log(router.currentRoute.value.meta.title)
+
+</script>
+
 <template>
     <div class="breadcrumb">
         <ul>
@@ -15,16 +26,6 @@
     </div>
 </template>
 
-<script lang="ts" setup>
-
-const router = useRouter()
-
-console.log(router.currentRoute.value.fullPath)
-console.log(router.currentRoute.value.meta.title)
-
-
-
-</script>
 
 <style lang="scss" scoped>
 
