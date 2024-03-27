@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "fiber",
   "private": true,
   "main": "dist-electron/main.js",
   "scripts": {

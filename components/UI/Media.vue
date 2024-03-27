@@ -14,7 +14,6 @@
         <NuxtImg class="media-picture" 
         :src="source"
         alt=""
-        width="290"
         fit="cover"
         loading="lazy"
         />
@@ -26,7 +25,6 @@
 
 <style lang="scss" scoped>
 .media {
-    margin: 3px;
 }
 
 </style>
