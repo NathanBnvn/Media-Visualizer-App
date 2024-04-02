@@ -10,7 +10,7 @@ definePageMeta({
 <template>
     <div class="home">
         <div class="home-container">
-            <div class="home-container-album" v-if="false">
+            <div class="home-container-album">
                 <UIAlbum class="home-album" 
                 title="Test" path="/albums/lais"
                 source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"/>
@@ -96,31 +96,38 @@ definePageMeta({
         padding: 20px;
         padding-bottom: 40px;
         
-        &-album, &-media {
-            // display: grid;
-            // grid-template-columns: repeat(
-            //     auto-fit, minmax(290px, max-content)
-            //     );
-            // justify-content: center;
-        }
         &-album {
-            // row-gap: 30px;
-            // column-gap: 10px;
-            // margin-bottom: 80px;
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(290px, max-content)
+                );
+            //justify-content: center;
+            row-gap: 10px;
+            column-gap: 10px;
+            margin-bottom: 80px;
         }
+
         &-media {
             margin: 0px;
             padding: 0px;
 
-            // display: inline-block;
-            // line-height: 0;
-   
-            //column-count:         4;
-            //column-gap:           3px;
-
             display: grid;
-            grid-template-columns: auto auto auto auto;
-            
+
+            @include mobile {
+                grid-template-columns: auto auto;
+            }
+
+            @include tablet {
+                grid-template-columns: auto auto auto auto;
+            }
+
+            @include desktop {
+                grid-template-columns: auto auto auto auto auto;
+            }
+
+            @include wide {
+                grid-template-columns: auto auto auto auto auto auto;
+            }
         }
     }
 }
