@@ -8,7 +8,7 @@ definePageMeta({
 
 <template>
     <div class="manager">
-        <SearchBar/>
+        <!-- <SearchBar/>
         <div> 
             <table class="manager-table">
                 <tr class="manager-table-header"> 
@@ -21,7 +21,7 @@ definePageMeta({
                 </tr>
             </table>
         </div>
-        <NuxtPage></NuxtPage>
+        <NuxtPage></NuxtPage> -->
     </div>
 </template>
 
@@ -45,9 +45,6 @@ definePageMeta({
     &-search {
         margin-bottom: 40px;
         
-        &-bar {
-
-        }
     }
 
     // padding: 10px;

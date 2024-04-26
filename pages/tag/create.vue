@@ -3,9 +3,6 @@
 
 <template>
     <div>
-        <form>
-            <UIInput/>
-        </form>
     </div>
 </template>
 

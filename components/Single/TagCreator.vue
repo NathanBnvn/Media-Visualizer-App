@@ -7,6 +7,8 @@
         <Icon class="tag-creator-icon" name="heroicons:tag-16-solid"/>
         <UIInput class="tag-creator-input" 
         type="text" placeholder="Add a tag"/>
+        <UIInput class="tag-creator-color-picker"
+        type="color" value="#ffffff"/>
     </div>
 </template>
 
@@ -32,7 +34,8 @@
     }
 
     &-input {
-        margin: 0px 0px 0px 0px;
+        margin: 0px;
+        width: 90px;
 
         @media (prefers-color-scheme: dark) {
             color: white;
@@ -45,6 +48,11 @@
         & :active, & :focus {
             outline: none;
         }
+    }
+
+    &-color-picker {
+        width: 20px;
+        height: 20px;
     }
 }
 

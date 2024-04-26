@@ -3,6 +3,7 @@
         inputId: String,
         type: String,
         list: String,
+        value: String,
         placeholder: String,
         hasLabel: Boolean,
         isComment: Boolean,
@@ -25,8 +26,9 @@
         <input v-else 
         class="input-input input-input-field" 
         :list="list" 
-        :type="type" 
-        :id="inputId" 
+        :type="type"
+        :value="value"
+        :id="inputId"
         :name="inputId" 
         :placeholder="placeholder">
     </div>
@@ -38,7 +40,6 @@
 .input {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
 
     &-label {
         margin-bottom: 5px;

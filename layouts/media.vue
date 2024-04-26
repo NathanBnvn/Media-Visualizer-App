@@ -4,7 +4,7 @@
         <main class="media-content">
             <Header/>
             <SingleHeading/>
-            <SingleHeader/>
+            <SingleMediaHeader/>
                 <slot name="media-container">
                     <NuxtPage/>
                 </slot>

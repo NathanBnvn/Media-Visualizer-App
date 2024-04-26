@@ -1,30 +1,27 @@
 <script lang="ts" setup>
-    const pictureProps = defineProps({
-        source: String,
-    })
+const pictureProps = defineProps({
+  source: String,
+});
 
-    function zoom(){}
+function zoom() {}
 
-    function getInformations(){}
-
+function getInformations() {}
 </script>
 
 <template>
-    <div class="media" @click="zoom">
-        <NuxtImg class="media-picture" 
-        :src="source"
-        alt=""
-        fit="cover"
-        loading="lazy"
-        />
-        <!-- 
-            <video class="media-video" :src="source"/>
-        -->
-    </div>
+  <div class="media" draggable="true" @click="zoom">
+    <NuxtImg
+      class="media-picture"
+      :src="source"
+      alt=""
+      fit="cover"
+      loading="lazy"
+    />
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .media {
+  padding: 0px;
 }
-
 </style>

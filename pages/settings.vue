@@ -4,7 +4,7 @@ definePageMeta({
   title: 'Settings'
 })
 
-const theme=ref<string>()
+const theme = ref<string>()
 
 const themeSelector = document.getElementsByClassName('settings-theme-selector')
 
@@ -26,24 +26,37 @@ function dismiss(){
 
 <template>
     <UIModal @is-close="dismiss">
-        
-        <nav></nav>
-        <div>
-            Settings
-            
-            <div>account</div>
-            <div>link account</div>
-            <span> Selected: {{ theme }}</span>
-            <select class="settings-theme-selector" v-model="theme">
-                <option>Dark mode</option>
-                <option>Light mode</option>
-                <option>System mode</option>
-            </select>
+        <div class="settings"> 
+            <nav class="settings-navigation">
+                <UIButton button-type="navigation" button-name="personalisation" path="settings/personalisation"/>
+    
+            </nav>
+            <div class="settings-content">
+                <NuxtPage/>
+            </div>
         </div>
     </UIModal>
 </template>
 
 <style lang="scss" scoped>
 @import './assets/scss/tools.scss';
+
+.settings {
+    display: flex;
+    height: 100%;
+
+    &-navigation {
+        flex-grow: 0;
+        flex-shrink: 0;
+        height: 100%;
+        width: 250px;
+        overflow-y: auto;
+        background-color: yellow;
+    }
+
+    &-content {
+        padding: 20px;
+    }
+}
 
 </style>

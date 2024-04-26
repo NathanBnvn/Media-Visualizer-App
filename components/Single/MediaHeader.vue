@@ -9,15 +9,15 @@ const showTags: Boolean = true
 </script>
 
 <template>
-    <div class="header">
+    <div class="media-header">
         <UIButton button-type="button" 
-        class="header-button-add"
+        class="media-header-button-add"
         icon-name="ic:round-add"
         @is-clicked="console.log('2')"/>
 
         <form method="post" enctype="multipart/form-data">
-            <label id="header-label-input">
-                <UIInput id="header-label-input" 
+            <label id="media-header-label-input">
+                <UIInput id="media-header-label-input" 
                 type="file" 
                 style="display: none;"/>
                 <span>
@@ -28,22 +28,22 @@ const showTags: Boolean = true
         </form>
 
         <UIButton button-type="button" 
-        class="header-button"
+        class="media-header-button"
         icon-name="heroicons:tag-16-solid" 
         @is-clicked="console.log('3')"/>
         
         <UIButton button-type="button" 
-        class="header-button"
+        class="media-header-button"
         icon-name="mingcute:settings-2-line" 
         @is-clicked="console.log('5')"/>
         
         <UIButton button-type="button"
-        class="header-button"
+        class="media-header-button"
         icon-name="charm:search" 
         @is-clicked="console.log('6')"/>
         
         <UIButton button-type="button"
-        class="header-button"
+        class="media-header-button"
         icon-name="ri:more-fill" 
         @is-clicked="console.log('7')"/>
     </div>
@@ -52,7 +52,7 @@ const showTags: Boolean = true
 
 <style lang="scss" scoped>
 
-.header {
+.media-header {
     display: flex;
     justify-content: flex-end;
     position: sticky;

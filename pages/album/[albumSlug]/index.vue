@@ -1,4 +1,9 @@
 <script lang="ts" setup>
+
+definePageMeta({
+    title: 'Album',
+    layout: 'media',
+})
 </script>
 
 <template>

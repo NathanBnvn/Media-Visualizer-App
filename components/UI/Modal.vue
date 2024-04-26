@@ -50,7 +50,6 @@ function dismiss(event: Event){
 
     &-container {
         position: relative;
-        padding: 20px;
         border-radius: 10px;
         overflow: hidden;
         max-width: calc(-100px + 100vw);
