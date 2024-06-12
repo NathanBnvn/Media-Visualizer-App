@@ -3,24 +3,12 @@ definePageMeta({
   title: "Home",
   layout: "media",
 });
-
-// const dropZoneRef = ref<HTMLDivElement>();
-
-// function onDrop(files: File[] | null) {
-//   // called when files are dropped on zone
-// }
-
-// const { isOverDropZone } = useDropZone(dropZoneRef, {
-//   onDrop,
-//   // specify the types of data to be received.
-//   dataTypes: ["image/jpeg"],
-// });
 </script>
 
 <template>
   <div class="home">
     <div class="home-container">
-      <div class="home-container-album" style="display: none">
+      <div class="home-container-album">
         <UIAlbum
           class="home-album"
           title="Test"
