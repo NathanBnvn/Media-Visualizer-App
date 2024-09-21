@@ -12,19 +12,19 @@
         iconName="mdi:home-circle-outline"
       />
 
-      <UIButton
+      <!-- <UIButton
         class="navigation-bar-button"
         buttonType="navigation"
         buttonName="Recent"
         path="/history"
         iconName=""
-      />
+      /> -->
 
       <UIButton
         class="navigation-bar-button"
         buttonType="navigation"
-        buttonName="Tag Manager"
-        path="/tag/manager"
+        buttonName="Tag"
+        path="/tag"
         iconName="solar:hashtag-circle-outline"
       />
 

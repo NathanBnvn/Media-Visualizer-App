@@ -9,86 +9,86 @@ definePageMeta({
   <div class="home">
     <div class="home-container">
       <div class="home-container-album">
-        <UIAlbum
+        <UITagCard
           class="home-album"
           title="Test"
-          path="/album/lais"
+          path="/tag/lais"
           source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
         />
-        <UIAlbum
+        <UITagCard
           class="home-album"
           title="Test"
-          path="/album/lais"
+          path="/tag/lais"
           source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
         />
-        <UIAlbum
+        <UITagCard
           class="home-album"
           title="Test"
-          path="/album/lais"
+          path="/tag/lais"
           source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
         />
-        <UIAlbum
+        <UITagCard
           class="home-album"
           title="Test"
-          path="/album/lais"
+          path="/tag/lais"
           source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
         />
-        <UIAlbum
+        <UITagCard
           class="home-album"
           title="Test"
-          path="/album/lais"
+          path="/tag/lais"
           source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
         />
-        <UIAlbum
+        <UITagCard
           class="home-album"
           title="Test"
-          path="/album/lais"
+          path="/tag/lais"
           source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
         />
-        <UIAlbum
+        <UITagCard
           class="home-album"
           title="Test"
-          path="/album/lais"
+          path="/tag/lais"
           source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
         />
-        <UIAlbum
+        <UITagCard
           class="home-album"
           title="Test"
-          path="/album/lais"
+          path="/tag/lais"
           source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
         />
-        <UIAlbum
+        <UITagCard
           class="home-album"
           title="Test"
-          path="/album/lais"
+          path="/tag/lais"
           source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
         />
-        <UIAlbum
+        <UITagCard
           class="home-album"
           title="Test"
-          path="/album/lais"
+          path="/tag/lais"
           source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
         />
-        <UIAlbum
+        <UITagCard
           class="home-album"
           title="Test"
-          path="/album/lais"
+          path="/tag/lais"
           source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
         />
-        <UIAlbum
+        <UITagCard
           class="home-album"
           title="Test"
-          path="/album/lais"
+          path="/tag/lais"
           source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
         />
-        <UIAlbum
+        <UITagCard
           class="home-album"
           title="Test"
-          path="/album/lais"
+          path="/tag/lais"
           source="/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
         />
 
-        <UIAlbum class="home-album" title="Test" path="/album/lais" />
+        <UITagCard class="home-album" title="Test" path="/tag/lais" />
       </div>
 
       <div class="home-container-media" ref="dropZoneRef">

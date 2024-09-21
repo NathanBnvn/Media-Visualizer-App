@@ -12,18 +12,12 @@ export default defineNuxtConfig({
   css: ["~/assets/scss/reset.scss"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    "nuxt-electron",
-    "@nuxtjs/google-fonts",
-    "nuxt-icon",
-    "@nuxt/image",
-    [
-      "@pinia/nuxt",
-      {
-        autoImports: ["defineStore", "acceptHMRUpdate"],
-      },
-    ],
-  ],
+  modules: ["nuxt-electron", "@nuxtjs/google-fonts", "nuxt-icon", "@nuxt/image", [
+    "@pinia/nuxt",
+    {
+      autoImports: ["defineStore", "acceptHMRUpdate"],
+    },
+  ], "@nuxt/ui"],
 
   imports: {
     dirs: ["stores"],
